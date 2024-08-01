@@ -12,6 +12,9 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
     public static final DeferredBlock<Block> DARKNESS_ORE = BLOCKS.register("darkness_ore",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT))); //TODO: modify latter
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))); //TODO: modify latter
+
+    public static final DeferredBlock<Block> LIGHT_ORE = BLOCKS.register("light_ore",
+            () -> new TestLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG))); //TODO: modify latter
 
 }

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "elemconv:block/light_ore_test_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model":"elemconv:block/light_ore"
+    },
+    "axis=z": {
+      "model":"elemconv:block/light_ore_test_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "itemGroup.elemconv": "Convergencia Elemental Objectos",
   "itemGroup.elemconv": "Convergencia Elemental Bloques",
-  "block.elemconv.darkness_ore": "Mena de oscuridad",
+  "block.elemconv.light_ore": "Mena de luz",
   "item.elemconv.raw_darkness": "Oscuridad en bruto"
 }

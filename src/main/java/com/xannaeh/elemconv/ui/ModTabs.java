@@ -20,7 +20,7 @@ public class ModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable("itemGroup.elemconv"))
                             .withTabsBefore(CreativeModeTabs.COMBAT)
-                            .icon(()-> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((parameters, output) -> {
                                 output.accept(ModItems.RAW_DARKNESS.get());
                             }))
@@ -31,9 +31,10 @@ public class ModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable("blockGroup.elemconv"))
                             .withTabsBefore(ELEM_CONV_ITEMS.getKey())
-                            .icon(()-> ModItems.DARKNESS_ORE.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.DARKNESS_ORE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((parameters, output) -> {
                                 output.accept(ModBlocks.DARKNESS_ORE.get());
+                                output.accept(ModBlocks.LIGHT_ORE.get());
                             }))
                             .build());
 }
