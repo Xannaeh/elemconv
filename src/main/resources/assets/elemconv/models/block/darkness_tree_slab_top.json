@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "elemconv:block/darkness_tree_planks",
+    "side": "elemconv:block/darkness_tree_planks",
+    "top": "elemconv:block/darkness_tree_planks"
+  }
+}

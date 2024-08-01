@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elemconv:block/darkness_tree_slab"
+    },
+    "type=top": {
+      "model": "elemconv:block/darkness_tree_slab_top"
+    },
+    "type=double": {
+      "model": "elemconv:block/darkness_tree_planks"
+    }
+  }
+}

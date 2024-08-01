@@ -37,6 +37,7 @@ public class ModTabs {
                                 output.accept(ModBlocks.LIGHT_ORE.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
                             }))
                             .build());
 }

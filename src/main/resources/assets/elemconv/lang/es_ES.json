@@ -5,5 +5,6 @@
   "item.elemconv.raw_darkness": "Oscuridad en bruto",
   "block.elemconv.darkness_tree_log": "Darkness Tree Log",
   "block.elemconv.darkness_ore": "Darkness ore",
-  "block.elemconv.darkness_tree_planks": "Darkness tree planks"
+  "block.elemconv.darkness_tree_planks": "Darkness tree planks",
+  "block.elemconv.darkness_tree_slab": "Darkness tree slab"
 }
