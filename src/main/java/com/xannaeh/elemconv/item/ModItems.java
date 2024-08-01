@@ -11,7 +11,7 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_DARKNESS = ITEMS.register("raw_darkness",()->
             new Item(new Item.Properties()
                     .stacksTo(64)
-                    .food(ModFoods.TEST_FOOD) // Just test
+                    .food(ModFoods.TEST_FOOD) //TODO: just for test
                     )
             );
 }

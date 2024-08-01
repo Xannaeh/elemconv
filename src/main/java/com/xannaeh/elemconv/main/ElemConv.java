@@ -1,6 +1,7 @@
 package com.xannaeh.elemconv.main;
 
 import com.xannaeh.elemconv.item.ModItems;
+import com.xannaeh.elemconv.ui.ModTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -19,5 +20,6 @@ public class ElemConv {
 
     public ElemConv(IEventBus modEventBus, ModContainer modContainer) {
         ModItems.ITEMS.register(modEventBus);
+        ModTabs.CREATIVE_TABS.register(modEventBus);
     }
 }

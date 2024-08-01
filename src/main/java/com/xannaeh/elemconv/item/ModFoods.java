@@ -5,7 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoods {
-    public static final FoodProperties TEST_FOOD = new FoodProperties.Builder()
+    public static final FoodProperties TEST_FOOD = new FoodProperties.Builder() //TODO: just for test
             .nutrition(10)
             .saturationModifier(0.5f)
             .alwaysEdible()
