@@ -35,6 +35,7 @@ public class ModTabs {
                             .displayItems(((parameters, output) -> {
                                 output.accept(ModBlocks.DARKNESS_ORE.get());
                                 output.accept(ModBlocks.LIGHT_ORE.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
                             }))
                             .build());
 }

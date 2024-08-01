@@ -15,6 +15,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))); //TODO: modify latter
 
     public static final DeferredBlock<Block> LIGHT_ORE = BLOCKS.register("light_ore",
-            () -> new TestLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG))); //TODO: modify latter
+            () -> new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG))); //TODO: modify latter
+
+    public static final DeferredBlock<Block> DARKNESS_TREE_LOG = BLOCKS.register("darkness_tree_log",
+            () -> new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG))); //TODO: modify latter
 
 }

@@ -1,3 +1,6 @@
 {
-  "values": ["elemconv:darkness_ore","elemconv:light_ore"]
+  "values": [
+    "elemconv:darkness_ore",
+    "elemconv:light_ore"
+  ]
 }

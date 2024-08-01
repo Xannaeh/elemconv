@@ -22,4 +22,7 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> LIGHT_ORE = ITEMS.registerSimpleBlockItem("light_ore",
             ModBlocks.LIGHT_ORE);
+
+    public static final DeferredItem<BlockItem> DARKNESS_TREE_LOG = ITEMS.registerSimpleBlockItem("darkness_tree_log",
+            ModBlocks.DARKNESS_TREE_LOG);
 }

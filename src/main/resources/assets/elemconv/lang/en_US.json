@@ -3,5 +3,6 @@
   "blockGroup.elemconv": "Elemental Convergence BlockS",
   "block.elemconv.darkness_ore": "Darkness ore",
   "block.elemconv.light_ore": "Light ore",
-  "item.elemconv.raw_darkness": "Raw darkness"
+  "item.elemconv.raw_darkness": "Raw darkness",
+  "block.elemconv.darkness_tree_log": "Darkness Tree Log"
 }
