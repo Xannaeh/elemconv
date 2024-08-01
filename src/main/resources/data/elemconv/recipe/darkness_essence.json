@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "elemconv:darkness_ingot"
+    },
+    "F": {
+      "item": "elemconv:darkness_fruit_dried"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IFI",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "elemconv:darkness_essence"
+  }
+}

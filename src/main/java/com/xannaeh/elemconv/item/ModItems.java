@@ -14,7 +14,28 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_DARKNESS = ITEMS.register("raw_darkness", () ->
             new Item(new Item.Properties()
                     .stacksTo(64)
-                    .food(ModFoods.TEST_FOOD) //TODO: just for test
+            )
+    );
+    public static final DeferredItem<Item> DARKNESS_INGOT = ITEMS.register("darkness_ingot", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+    public static final DeferredItem<Item> DARKNESS_ESSENCE = ITEMS.register("darkness_essence", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+    public static final DeferredItem<Item> DARKNESS_FRUIT = ITEMS.register("darkness_fruit", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .food(ModFoods.DARKNESS_FRUIT)
+            )
+    );
+    public static final DeferredItem<Item> DARKNESS_FRUIT_DRIED = ITEMS.register("darkness_fruit_dried", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .food(ModFoods.DARKNESS_FRUIT_DRIED)
             )
     );
 

@@ -7,5 +7,9 @@
   "block.elemconv.darkness_tree_log": "Darkness tree log",
   "block.elemconv.darkness_tree_planks": "Darkness tree planks",
   "block.elemconv.darkness_tree_slab": "Darkness tree slab",
-  "block.elemconv.darkness_flower": "Darkness flower"
+  "block.elemconv.darkness_flower": "Darkness flower",
+  "item.elemconv.darkness_fruit": "Darkness fruit",
+  "item.elemconv.darkness_fruit_dried": "Darkness fruit dried",
+  "item.elemconv.darkness_ingot": "Darkness ingot",
+  "item.elemconv.darkness_essence": "Darkness essence"
 }
