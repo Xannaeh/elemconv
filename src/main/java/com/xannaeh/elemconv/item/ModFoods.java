@@ -9,6 +9,6 @@ public class ModFoods {
             .nutrition(10)
             .saturationModifier(0.5f)
             .alwaysEdible()
-            .effect(new MobEffectInstance(MobEffects.DIG_SPEED,100,2),0.5f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED,100,3), 0.5f)
             .build();
 }

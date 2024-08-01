@@ -1,6 +1,8 @@
 package com.xannaeh.elemconv.item;
 
+import com.xannaeh.elemconv.block.ModBlocks;
 import com.xannaeh.elemconv.main.ElemConv;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -14,4 +16,7 @@ public class ModItems {
                     .food(ModFoods.TEST_FOOD) //TODO: just for test
                     )
             );
+
+    public static final DeferredItem<BlockItem> DARKNESS_ORE = ITEMS.registerSimpleBlockItem("darkness_ore",
+            ModBlocks.DARKNESS_ORE);
 }

@@ -1,5 +1,6 @@
 package com.xannaeh.elemconv.ui;
 
+import com.xannaeh.elemconv.block.ModBlocks;
 import com.xannaeh.elemconv.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -30,9 +31,9 @@ public class ModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable("blockGroup.elemconv"))
                             .withTabsBefore(ELEM_CONV_ITEMS.getKey())
-                            .icon(()-> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(()-> ModItems.DARKNESS_ORE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((parameters, output) -> {
-                                output.accept(ModItems.RAW_DARKNESS.get());
+                                output.accept(ModBlocks.DARKNESS_ORE.get());
                             }))
                             .build());
 }
