@@ -20,4 +20,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DARKNESS_TREE_LOG = BLOCKS.register("darkness_tree_log",
             () -> new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG))); //TODO: modify latter
 
+    public static final DeferredBlock<Block> DARKNESS_TREE_PLANKS = BLOCKS.register("darkness_tree_planks",
+            () -> new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS))); //TODO: modify latter
+
 }

@@ -1,7 +1,9 @@
 {
   "itemGroup.elemconv": "Convergencia Elemental Objectos",
-  "itemGroup.elemconv": "Convergencia Elemental Bloques",
+  "blockGroup.elemconv": "Convergencia Elemental Bloques",
   "block.elemconv.light_ore": "Mena de luz",
   "item.elemconv.raw_darkness": "Oscuridad en bruto",
-  "block.elemconv.darkness_tree_log": "Darkness Tree Log"
+  "block.elemconv.darkness_tree_log": "Darkness Tree Log",
+  "block.elemconv.darkness_ore": "Darkness ore",
+  "block.elemconv.darkness_tree_planks": "Darkness tree planks"
 }
