@@ -24,4 +24,5 @@ public class ModItems {
     public static final DeferredItem<BlockItem> DARKNESS_TREE_LOG = ITEMS.registerSimpleBlockItem("darkness_tree_log", ModBlocks.DARKNESS_TREE_LOG);
     public static final DeferredItem<BlockItem> DARKNESS_TREE_PLANKS = ITEMS.registerSimpleBlockItem("darkness_tree_planks", ModBlocks.DARKNESS_TREE_PLANKS);
     public static final DeferredItem<BlockItem> DARKNESS_TREE_SLAB = ITEMS.registerSimpleBlockItem("darkness_tree_slab", ModBlocks.DARKNESS_TREE_SLAB);
+    public static final DeferredItem<BlockItem> DARKNESS_FLOWER = ITEMS.registerSimpleBlockItem("darkness_flower", ModBlocks.DARKNESS_FLOWER);
 }

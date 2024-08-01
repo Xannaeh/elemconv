@@ -40,4 +40,15 @@ public class ModTabs {
                                 output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
                             }))
                             .build());
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ELEM_CONV_DECORATIVE =
+            CREATIVE_TABS.register("elemconvdecorative", () ->
+                    CreativeModeTab.builder()
+                            .title(Component.translatable("blockGroup.elemconv"))
+                            .withTabsBefore(ELEM_CONV_BLOCK.getKey())
+                            .icon(() -> ModItems.DARKNESS_FLOWER.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .displayItems(((parameters, output) -> {
+                                output.accept(ModBlocks.DARKNESS_FLOWER.get());
+                            }))
+                            .build());
 }

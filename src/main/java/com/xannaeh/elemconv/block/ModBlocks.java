@@ -1,7 +1,9 @@
 package com.xannaeh.elemconv.block;
 
+import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -22,5 +24,7 @@ public class ModBlocks {
             () -> new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS))); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_SLAB = BLOCKS.register("darkness_tree_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SLAB))); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_FLOWER = BLOCKS.register("darkness_flower",
+            () -> new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY))); //TODO: modify latter
 
 }
