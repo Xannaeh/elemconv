@@ -23,11 +23,19 @@ public class CreativeModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable(ELEM_CONV_LIGHT_TITLE))
                             .withTabsBefore(CreativeModeTabs.COMBAT)
-                            .icon(() -> ModItems.DARKNESS_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.LIGHT_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                                 output.accept(ModBlocks.LIGHT_ORE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
                                 output.accept(ModItems.LIGHT_RAW.get());
+                                output.accept(ModItems.LIGHT_INGOT.get());
+                                output.accept(ModItems.LIGHT_FRUIT.get());
+                                output.accept(ModItems.LIGHT_FRUIT_DRIED.get());
+                                output.accept(ModItems.LIGHT_ESSENCE.get());
+                                output.accept(ModBlocks.LIGHT_TREE_LOG.get());
+                                output.accept(ModBlocks.LIGHT_TREE_PLANKS.get());
+                                output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
+                                output.accept(ModBlocks.LIGHT_FLOWER.get());
                             }))
                             .build());
 
@@ -43,10 +51,6 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
                                 output.accept(ModItems.DARKNESS_RAW.get());
                                 output.accept(ModItems.DARKNESS_INGOT.get());
-                                output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
-                                output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
-                                output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
-                                output.accept(ModBlocks.DARKNESS_FLOWER.get());
                                 output.accept(ModItems.DARKNESS_FRUIT.get());
                                 output.accept(ModItems.DARKNESS_FRUIT_DRIED.get());
                                 output.accept(ModItems.DARKNESS_ESSENCE.get());

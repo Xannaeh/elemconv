@@ -17,14 +17,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Ores
+        // Darkness
         modNormalBlock(ModBlocks.DARKNESS_ORE.get());
         modNormalBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
+        // Light
         modNormalBlock(ModBlocks.LIGHT_ORE.get());
         modNormalBlock(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
+
+        // Blocks
+        // Darkness
         modNormalBlock(ModBlocks.DARKNESS_TREE_PLANKS.get());
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
+        // Light
+        modNormalBlock(ModBlocks.LIGHT_TREE_PLANKS.get());
+        modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
+        modPlanksSlabBlock(ModBlocks.LIGHT_TREE_SLAB.get());
+        modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
     }
 
     private void modNormalBlock(Block block) {

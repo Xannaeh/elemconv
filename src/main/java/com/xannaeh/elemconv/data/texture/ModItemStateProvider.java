@@ -26,6 +26,10 @@ public class ModItemStateProvider extends ItemModelProvider {
 
         //Blocks
         item(ModItems.LIGHT_RAW.get());
+        item(ModItems.LIGHT_INGOT.get());
+        item(ModItems.LIGHT_ESSENCE.get());
+        item(ModItems.LIGHT_FRUIT.get());
+        item(ModItems.LIGHT_FRUIT_DRIED.get());
 
     }
 

@@ -44,5 +44,27 @@ public class ModItems {
                     .stacksTo(64)
             )
     );
+    public static final DeferredItem<Item> LIGHT_INGOT = ITEMS.register("light_ingot", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+    public static final DeferredItem<Item> LIGHT_ESSENCE = ITEMS.register("light_essence", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
+    public static final DeferredItem<Item> LIGHT_FRUIT = ITEMS.register("light_fruit", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .food(ModFoods.LIGHT_FRUIT)
+            )
+    );
+    public static final DeferredItem<Item> LIGHT_FRUIT_DRIED = ITEMS.register("light_fruit_dried", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .food(ModFoods.LIGHT_FRUIT_DRIED)
+            )
+    );
 
 }

@@ -22,6 +22,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        // Ores
         // Darkness
         add(ModBlocks.DARKNESS_ORE.get(), createOreDrop(ModBlocks.DARKNESS_ORE.get(), ModItems.DARKNESS_RAW.get()));
         add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), ModItems.DARKNESS_RAW.get()));
@@ -30,11 +31,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), ModItems.LIGHT_RAW.get()));
 
 
-
+        // Blocks
+        // Darkness
         dropSelf(ModBlocks.DARKNESS_TREE_LOG.get());
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
+        // Light
+        dropSelf(ModBlocks.LIGHT_TREE_LOG.get());
+        dropSelf(ModBlocks.LIGHT_TREE_PLANKS.get());
+        dropSelf(ModBlocks.LIGHT_TREE_SLAB.get());
+        dropSelf(ModBlocks.LIGHT_FLOWER.get());
     }
 
     @Override

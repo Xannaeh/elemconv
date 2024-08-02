@@ -20,17 +20,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        // Ores
+        // Darkness
         tag(ModTags.ModBlockTags.DARKNESS_ORE_TAG)
                 .add(ModBlocks.DARKNESS_ORE.get());
         tag(ModTags.ModBlockTags.DARKNESS_ORE_DEEPSLATE_TAG)
                 .add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
-
+        // Light
         tag(ModTags.ModBlockTags.LIGHT_ORE_TAG)
                 .add(ModBlocks.LIGHT_ORE.get());
         tag(ModTags.ModBlockTags.LIGHT_ORE_DEEPSLATE_TAG)
                 .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
 
-
+        // TOOLS
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DARKNESS_ORE.get())
                 .add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get())
@@ -40,7 +42,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
-                .add(ModBlocks.DARKNESS_TREE_SLAB.get());
+                .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                .add(ModBlocks.LIGHT_TREE_LOG.get())
+                .add(ModBlocks.LIGHT_TREE_PLANKS.get())
+                .add(ModBlocks.LIGHT_TREE_SLAB.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DARKNESS_ORE.get())
@@ -49,7 +54,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
-                .add(ModBlocks.DARKNESS_TREE_SLAB.get());
+                .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                .add(ModBlocks.LIGHT_TREE_LOG.get())
+                .add(ModBlocks.LIGHT_TREE_PLANKS.get())
+                .add(ModBlocks.LIGHT_TREE_SLAB.get());
 
     }
 }

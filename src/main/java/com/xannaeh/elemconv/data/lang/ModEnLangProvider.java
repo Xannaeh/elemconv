@@ -18,12 +18,16 @@ public class ModEnLangProvider extends LanguageProvider {
         // Items
         // Darkness
         addItem(ModItems.DARKNESS_RAW, "Raw Darkness");
-        addItem(ModItems.DARKNESS_INGOT, "Raw ingot");
-        addItem(ModItems.DARKNESS_FRUIT, "Raw fruit");
-        addItem(ModItems.DARKNESS_FRUIT_DRIED, "Raw fruit dried");
-        addItem(ModItems.DARKNESS_ESSENCE, "Raw essence");
+        addItem(ModItems.DARKNESS_INGOT, "Darkness ingot");
+        addItem(ModItems.DARKNESS_FRUIT, "Darkness fruit");
+        addItem(ModItems.DARKNESS_FRUIT_DRIED, "Darkness fruit dried");
+        addItem(ModItems.DARKNESS_ESSENCE, "Darkness essence");
         // Light
         addItem(ModItems.LIGHT_RAW, "Raw Light");
+        addItem(ModItems.LIGHT_INGOT, "Light ingot");
+        addItem(ModItems.LIGHT_FRUIT, "Light fruit");
+        addItem(ModItems.LIGHT_FRUIT_DRIED, "Light fruit dried");
+        addItem(ModItems.LIGHT_ESSENCE, "Light essence");
 
         // Blocks
         // Darkness
@@ -36,6 +40,10 @@ public class ModEnLangProvider extends LanguageProvider {
         // Light
         addBlock(ModBlocks.LIGHT_ORE, "Light ore");
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");
+        addBlock(ModBlocks.LIGHT_TREE_LOG, "Light tree log");
+        addBlock(ModBlocks.LIGHT_TREE_PLANKS, "Light tree planks");
+        addBlock(ModBlocks.LIGHT_TREE_SLAB, "Light tree slab");
+        addBlock(ModBlocks.LIGHT_FLOWER, "Light flower");
 
         // UI
         // CreativeTabs
