@@ -1,9 +1,9 @@
 package com.xannaeh.elemconv.data.lang;
 
-import com.xannaeh.elemconv.block.ModBlocks;
-import com.xannaeh.elemconv.item.ModItems;
+import com.xannaeh.elemconv.initializers.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.item.ModItems;
 import com.xannaeh.elemconv.main.ElemConv;
-import com.xannaeh.elemconv.ui.CreativeModTabs;
+import com.xannaeh.elemconv.initializers.ui.CreativeModTabs;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
@@ -26,10 +26,10 @@ public class ModEnLangProvider extends LanguageProvider {
         //Blocks
             //Darkness
         addBlock(ModBlocks.DARKNESS_ORE,"Darkness ore");
-//        addBlock(ModBlocks.DARKNESS_TREE_LOG,"Darkness tree log");
+        addBlock(ModBlocks.DARKNESS_TREE_LOG,"Darkness tree log");
         addBlock(ModBlocks.DARKNESS_TREE_PLANKS,"Darkness tree planks");
-//        addBlock(ModBlocks.DARKNESS_TREE_SLAB,"Darkness tree slab");
-//        addBlock(ModBlocks.DARKNESS_FLOWER,"Darkness flower");
+        addBlock(ModBlocks.DARKNESS_TREE_SLAB,"Darkness tree slab");
+        addBlock(ModBlocks.DARKNESS_FLOWER,"Darkness flower");
             //Light
         addBlock(ModBlocks.LIGHT_ORE,"Light ore");
 

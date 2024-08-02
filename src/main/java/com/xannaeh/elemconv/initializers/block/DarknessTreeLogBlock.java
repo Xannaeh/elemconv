@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.block;
+package com.xannaeh.elemconv.initializers.block;
 
 
 import net.minecraft.core.BlockPos;

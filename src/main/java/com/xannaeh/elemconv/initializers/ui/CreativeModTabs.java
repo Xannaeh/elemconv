@@ -1,7 +1,7 @@
-package com.xannaeh.elemconv.ui;
+package com.xannaeh.elemconv.initializers.ui;
 
-import com.xannaeh.elemconv.block.ModBlocks;
-import com.xannaeh.elemconv.item.ModItems;
+import com.xannaeh.elemconv.initializers.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

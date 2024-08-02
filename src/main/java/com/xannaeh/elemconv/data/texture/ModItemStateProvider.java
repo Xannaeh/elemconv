@@ -1,6 +1,6 @@
 package com.xannaeh.elemconv.data.texture;
 
-import com.xannaeh.elemconv.item.ModItems;
+import com.xannaeh.elemconv.initializers.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;

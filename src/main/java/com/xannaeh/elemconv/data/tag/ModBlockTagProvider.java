@@ -1,6 +1,6 @@
 package com.xannaeh.elemconv.data.tag;
 
-import com.xannaeh.elemconv.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -19,11 +19,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+//        tag(ModBlockTags.EXAMPLE_BLOCK_TAG)
+//                .add(ModBlocks.DARKNESS_ORE.get());
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DARKNESS_ORE.get())
                 .add(ModBlocks.LIGHT_ORE.get());
 
         tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.DARKNESS_TREE_LOG.get())
+                .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
+                .add(ModBlocks.DARKNESS_TREE_SLAB.get());
+
+
+//        TagKey<Block> netherite = createNeoForgeTag("needs_netherite_tool");
+
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.DARKNESS_ORE.get())
+                .add(ModBlocks.LIGHT_ORE.get())
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get());

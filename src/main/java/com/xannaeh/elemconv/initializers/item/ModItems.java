@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.item;
+package com.xannaeh.elemconv.initializers.item;
 
 import com.xannaeh.elemconv.main.ElemConv;
 import net.minecraft.world.item.Item;
@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ElemConv.MODID);
 
-    // ITEMS
+    // Darkness
     public static final DeferredItem<Item> RAW_DARKNESS = ITEMS.register("raw_darkness", () ->
             new Item(new Item.Properties()
                     .stacksTo(64)
@@ -36,5 +36,8 @@ public class ModItems {
                     .food(ModFoods.DARKNESS_FRUIT_DRIED)
             )
     );
+
+
+    // Light
 
 }

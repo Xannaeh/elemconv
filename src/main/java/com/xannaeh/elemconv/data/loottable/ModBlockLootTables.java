@@ -1,6 +1,6 @@
 package com.xannaeh.elemconv.data.loottable;
 
-import com.xannaeh.elemconv.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -25,7 +25,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_ORE.get());
         dropSelf(ModBlocks.DARKNESS_TREE_LOG.get());
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
-//        dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());
+        dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
     }
 

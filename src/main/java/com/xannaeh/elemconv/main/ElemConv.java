@@ -1,9 +1,10 @@
 package com.xannaeh.elemconv.main;
 
-import com.xannaeh.elemconv.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.block.ModBlocks;
 import com.xannaeh.elemconv.data.DataGenerators;
-import com.xannaeh.elemconv.item.ModItems;
-import com.xannaeh.elemconv.ui.CreativeModTabs;
+import com.xannaeh.elemconv.initializers.item.ModItems;
+import com.xannaeh.elemconv.initializers.tag.ModTags;
+import com.xannaeh.elemconv.initializers.ui.CreativeModTabs;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
@@ -26,13 +27,14 @@ public class ElemConv {
         CreativeModTabs.CREATIVE_TABS.register(modEventBus);
 
         modEventBus.addListener(DataGenerators::gatherData);
+        modEventBus.addListener(this::setup);
+    }
 
-        modEventBus.addListener(FMLClientSetupEvent.class, (fmlClientSetupEvent -> {
-            fmlClientSetupEvent.enqueueWork(() -> {
-                ModList.get().getModContainerById(MODID).ifPresent(modContainer1 -> {
-                    logger.info("Hello from Elemental Convergence, using version: {}", modContainer.getModInfo().getVersion());
-                });
+    private void setup(final FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModList.get().getModContainerById(MODID).ifPresent(modContainer -> {
+                logger.info("Hello from Elemental Convergence, using version: {}", modContainer.getModInfo().getVersion());
             });
-        }));
+        });
     }
 }
