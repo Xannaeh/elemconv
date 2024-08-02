@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "elemconv:block/darkness_ore",
-    "side": "elemconv:block/light_ore"
-  }
-}

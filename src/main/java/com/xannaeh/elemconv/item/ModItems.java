@@ -1,8 +1,6 @@
 package com.xannaeh.elemconv.item;
 
-import com.xannaeh.elemconv.block.ModBlocks;
 import com.xannaeh.elemconv.main.ElemConv;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -39,11 +37,4 @@ public class ModItems {
             )
     );
 
-    // BLOCKS
-    public static final DeferredItem<BlockItem> DARKNESS_ORE = ITEMS.registerSimpleBlockItem("darkness_ore", ModBlocks.DARKNESS_ORE);
-    public static final DeferredItem<BlockItem> LIGHT_ORE = ITEMS.registerSimpleBlockItem("light_ore", ModBlocks.LIGHT_ORE);
-    public static final DeferredItem<BlockItem> DARKNESS_TREE_LOG = ITEMS.registerSimpleBlockItem("darkness_tree_log", ModBlocks.DARKNESS_TREE_LOG);
-    public static final DeferredItem<BlockItem> DARKNESS_TREE_PLANKS = ITEMS.registerSimpleBlockItem("darkness_tree_planks", ModBlocks.DARKNESS_TREE_PLANKS);
-    public static final DeferredItem<BlockItem> DARKNESS_TREE_SLAB = ITEMS.registerSimpleBlockItem("darkness_tree_slab", ModBlocks.DARKNESS_TREE_SLAB);
-    public static final DeferredItem<BlockItem> DARKNESS_FLOWER = ITEMS.registerSimpleBlockItem("darkness_flower", ModBlocks.DARKNESS_FLOWER);
 }
