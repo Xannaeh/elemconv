@@ -26,6 +26,8 @@ public class CreativeModTabs {
                             .icon(() -> ModItems.DARKNESS_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                                 output.accept(ModBlocks.LIGHT_ORE.get());
+                                output.accept(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
+                                output.accept(ModItems.LIGHT_RAW.get());
                             }))
                             .build());
 
@@ -38,7 +40,8 @@ public class CreativeModTabs {
                             .icon(() -> ModItems.DARKNESS_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((parameters, output) -> {
                                 output.accept(ModBlocks.DARKNESS_ORE.get());
-                                output.accept(ModItems.RAW_DARKNESS.get());
+                                output.accept(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
+                                output.accept(ModItems.DARKNESS_RAW.get());
                                 output.accept(ModItems.DARKNESS_INGOT.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
@@ -56,7 +59,7 @@ public class CreativeModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable(ELEM_CONV_ARCANE_TITLE))
                             .withTabsBefore(ELEM_CONV_DARKNESS.getKey())
-                            .icon(() -> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.DARKNESS_RAW.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                             }))
                             .build());
@@ -67,7 +70,7 @@ public class CreativeModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable(ELEM_CONV_DUAL_TITLE))
                             .withTabsBefore(ELEM_CONV_ARCANE.getKey())
-                            .icon(() -> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.DARKNESS_RAW.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                             }))
                             .build());
@@ -78,7 +81,7 @@ public class CreativeModTabs {
                     CreativeModeTab.builder()
                             .title(Component.translatable(ELEM_CONV_MISC_TITLE))
                             .withTabsBefore(ELEM_CONV_DUAL.getKey())
-                            .icon(() -> ModItems.RAW_DARKNESS.get().getDefaultInstance()) //TODO: Change for real icon later
+                            .icon(() -> ModItems.DARKNESS_RAW.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                             }))
                             .build());

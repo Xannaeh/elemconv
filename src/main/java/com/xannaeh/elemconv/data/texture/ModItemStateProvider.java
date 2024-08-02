@@ -17,14 +17,15 @@ public class ModItemStateProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         //Items
-            //Darkness
-        item(ModItems.RAW_DARKNESS.get());
+        //Darkness
+        item(ModItems.DARKNESS_RAW.get());
         item(ModItems.DARKNESS_INGOT.get());
         item(ModItems.DARKNESS_ESSENCE.get());
         item(ModItems.DARKNESS_FRUIT.get());
         item(ModItems.DARKNESS_FRUIT_DRIED.get());
 
         //Blocks
+        item(ModItems.LIGHT_RAW.get());
 
     }
 

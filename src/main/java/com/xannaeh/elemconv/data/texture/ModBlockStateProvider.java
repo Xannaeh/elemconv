@@ -18,7 +18,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         modNormalBlock(ModBlocks.DARKNESS_ORE.get());
+        modNormalBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
         modNormalBlock(ModBlocks.LIGHT_ORE.get());
+        modNormalBlock(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
         modNormalBlock(ModBlocks.DARKNESS_TREE_PLANKS.get());
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
@@ -46,7 +48,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
         String path = blockKey.getPath();
         String pathFullBlock = path.replace("_slab", "_planks");
-                simpleBlock(block, models().slab(path, modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock)));
+        simpleBlock(block, models().slab(path, modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock)));
 //        simpleBlock(block, models().slabTop(path, modLoc("block/" + path), modLoc("block/" + path), modLoc("block/" + path)));
         simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
     }

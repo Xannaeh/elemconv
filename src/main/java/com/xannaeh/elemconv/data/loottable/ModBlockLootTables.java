@@ -1,6 +1,7 @@
 package com.xannaeh.elemconv.data.loottable;
 
 import com.xannaeh.elemconv.initializers.block.ModBlocks;
+import com.xannaeh.elemconv.initializers.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -21,8 +22,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.DARKNESS_ORE.get());
-        dropSelf(ModBlocks.LIGHT_ORE.get());
+        // Darkness
+        add(ModBlocks.DARKNESS_ORE.get(), createOreDrop(ModBlocks.DARKNESS_ORE.get(), ModItems.DARKNESS_RAW.get()));
+        add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), ModItems.DARKNESS_RAW.get()));
+        // Light
+        add(ModBlocks.LIGHT_ORE.get(), createOreDrop(ModBlocks.LIGHT_ORE.get(), ModItems.LIGHT_RAW.get()));
+        add(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), ModItems.LIGHT_RAW.get()));
+
+
+
         dropSelf(ModBlocks.DARKNESS_TREE_LOG.get());
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());

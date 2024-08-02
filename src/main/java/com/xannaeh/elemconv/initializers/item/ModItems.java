@@ -9,7 +9,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ElemConv.MODID);
 
     // Darkness
-    public static final DeferredItem<Item> RAW_DARKNESS = ITEMS.register("raw_darkness", () ->
+    public static DeferredItem<Item> DARKNESS_RAW = ITEMS.register("darkness_raw", () ->
             new Item(new Item.Properties()
                     .stacksTo(64)
             )
@@ -39,5 +39,10 @@ public class ModItems {
 
 
     // Light
+    public static DeferredItem<Item> LIGHT_RAW = ITEMS.register("light_raw", () ->
+            new Item(new Item.Properties()
+                    .stacksTo(64)
+            )
+    );
 
 }
