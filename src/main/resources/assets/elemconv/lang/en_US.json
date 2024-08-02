@@ -1,6 +1,9 @@
 {
-  "itemGroup.elemconv": "Elemental Convergence Items",
-  "blockGroup.elemconv": "Elemental Convergence BlockS",
+  "lightGroup.elemconv": "Elemental Convergence Light",
+  "darknessGroup.elemconv": "Elemental Convergence Darkness",
+  "arcaneGroup.elemconv": "Elemental Convergence Arcane",
+  "dualGroup.elemconv": "Elemental Convergence Dual",
+  "miscGroup.elemconv": "Elemental Convergence Miscellaneous",
   "block.elemconv.darkness_ore": "Darkness ore",
   "block.elemconv.light_ore": "Light ore",
   "item.elemconv.raw_darkness": "Raw darkness",
