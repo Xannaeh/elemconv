@@ -23,6 +23,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addItem(ModItems.DARKNESS_FRUIT_DRIED, "Darkness fruit dried");
         addItem(ModItems.DARKNESS_ESSENCE, "Darkness essence");
         addItem(ModItems.DARKNESS_IN_A_BOTTLE, "Darkness in a bottle");
+        addItem(ModItems.DARKNESS_COAL, "Darkness coal");
         // Light
         addItem(ModItems.LIGHT_RAW, "Raw Light");
         addItem(ModItems.LIGHT_INGOT, "Light ingot");
@@ -30,6 +31,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addItem(ModItems.LIGHT_FRUIT_DRIED, "Light fruit dried");
         addItem(ModItems.LIGHT_ESSENCE, "Light essence");
         addItem(ModItems.LIGHT_IN_A_BOTTLE, "Light in a bottle");
+        addItem(ModItems.LIGHT_COAL, "Light coal");
 
         // Blocks
         // Darkness

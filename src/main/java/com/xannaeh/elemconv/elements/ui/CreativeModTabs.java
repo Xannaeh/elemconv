@@ -41,6 +41,7 @@ public class CreativeModTabs {
                                 output.accept(ModItems.DARKNESS_FRUIT_DRIED.get());
                                 output.accept(ModItems.DARKNESS_ESSENCE.get());
                                 output.accept(ModItems.DARKNESS_IN_A_BOTTLE.get());
+                                output.accept(ModItems.DARKNESS_COAL.get());
                                 // Tools + Armor
                                 output.accept(ModItems.DARKNESS_AXE.get());
                             }))
@@ -70,6 +71,7 @@ public class CreativeModTabs {
                                 output.accept(ModItems.LIGHT_FRUIT_DRIED.get());
                                 output.accept(ModItems.LIGHT_ESSENCE.get());
                                 output.accept(ModItems.LIGHT_IN_A_BOTTLE.get());
+                                output.accept(ModItems.LIGHT_COAL.get());
                                 // Tools + Armor
                             }))
                             .build());

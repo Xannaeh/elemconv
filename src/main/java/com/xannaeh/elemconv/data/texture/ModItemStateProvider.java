@@ -24,6 +24,7 @@ public class ModItemStateProvider extends ItemModelProvider {
         item(ModItems.DARKNESS_FRUIT.get());
         item(ModItems.DARKNESS_FRUIT_DRIED.get());
         item(ModItems.DARKNESS_IN_A_BOTTLE.get());
+        item(ModItems.DARKNESS_COAL.get());
 
         // Light
         item(ModItems.LIGHT_RAW.get());
@@ -32,6 +33,7 @@ public class ModItemStateProvider extends ItemModelProvider {
         item(ModItems.LIGHT_FRUIT.get());
         item(ModItems.LIGHT_FRUIT_DRIED.get());
         item(ModItems.LIGHT_IN_A_BOTTLE.get());
+        item(ModItems.LIGHT_COAL.get());
 
         // Tools + Armors
         // Darkness

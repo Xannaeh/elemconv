@@ -5,8 +5,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 
 
-public class LightInABottle extends Item {
-    public LightInABottle(Properties pProperties) {
+public class DarknessInABottleItem extends Item {
+    public DarknessInABottleItem(Item.Properties pProperties) {
         super(pProperties);
     }
 
