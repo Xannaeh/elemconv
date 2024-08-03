@@ -1,7 +1,7 @@
 package com.xannaeh.elemconv.data.loottable;
 
-import com.xannaeh.elemconv.initializers.block.ModBlocks;
-import com.xannaeh.elemconv.initializers.item.ModItems;
+import com.xannaeh.elemconv.elements.block.ModBlocks;
+import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;

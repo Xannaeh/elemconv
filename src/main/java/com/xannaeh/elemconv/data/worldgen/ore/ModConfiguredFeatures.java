@@ -1,6 +1,6 @@
 package com.xannaeh.elemconv.data.worldgen.ore;
 
-import com.xannaeh.elemconv.initializers.block.ModBlocks;
+import com.xannaeh.elemconv.elements.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;

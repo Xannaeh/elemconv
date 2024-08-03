@@ -1,6 +1,6 @@
 package com.xannaeh.elemconv.data.texture;
 
-import com.xannaeh.elemconv.initializers.item.ModItems;
+import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
@@ -16,20 +16,26 @@ public class ModItemStateProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        //Items
-        //Darkness
+        // Items
+        // Darkness
         item(ModItems.DARKNESS_RAW.get());
         item(ModItems.DARKNESS_INGOT.get());
         item(ModItems.DARKNESS_ESSENCE.get());
         item(ModItems.DARKNESS_FRUIT.get());
         item(ModItems.DARKNESS_FRUIT_DRIED.get());
 
-        //Blocks
+        // Light
         item(ModItems.LIGHT_RAW.get());
         item(ModItems.LIGHT_INGOT.get());
         item(ModItems.LIGHT_ESSENCE.get());
         item(ModItems.LIGHT_FRUIT.get());
         item(ModItems.LIGHT_FRUIT_DRIED.get());
+
+        // Tools + Armors
+        // Darkness
+        item(ModItems.DARKNESS_AXE.get());
+
+        // Light
 
     }
 

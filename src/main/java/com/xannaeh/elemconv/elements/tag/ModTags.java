@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.initializers.tag;
+package com.xannaeh.elemconv.elements.tag;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.initializers.block;
+package com.xannaeh.elemconv.elements.block;
 
 
 import net.minecraft.core.BlockPos;
@@ -7,8 +7,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class LightTreeLogBlock extends RotatedPillarBlock {
-    public LightTreeLogBlock(Properties prop) {
+public class DarknessTreeLogBlock extends RotatedPillarBlock {
+    public DarknessTreeLogBlock(Properties prop) {
         super(prop);
     }
 

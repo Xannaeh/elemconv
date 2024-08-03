@@ -1,7 +1,7 @@
 package com.xannaeh.elemconv.data.tag;
 
-import com.xannaeh.elemconv.initializers.block.ModBlocks;
-import com.xannaeh.elemconv.initializers.tag.ModTags;
+import com.xannaeh.elemconv.elements.block.ModBlocks;
+import com.xannaeh.elemconv.elements.tag.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

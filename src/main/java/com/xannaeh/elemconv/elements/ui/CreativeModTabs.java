@@ -1,7 +1,7 @@
-package com.xannaeh.elemconv.initializers.ui;
+package com.xannaeh.elemconv.elements.ui;
 
-import com.xannaeh.elemconv.initializers.block.ModBlocks;
-import com.xannaeh.elemconv.initializers.item.ModItems;
+import com.xannaeh.elemconv.elements.block.ModBlocks;
+import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,14 +25,22 @@ public class CreativeModTabs {
                             .withTabsBefore(CreativeModeTabs.COMBAT)
                             .icon(() -> ModItems.DARKNESS_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((parameters, output) -> {
+                                // BLocks
                                 output.accept(ModBlocks.DARKNESS_ORE.get());
                                 output.accept(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.DARKNESS_ORE_ENDSTONE.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
+                                output.accept(ModBlocks.DARKNESS_FLOWER.get());
+                                // Items
                                 output.accept(ModItems.DARKNESS_RAW.get());
                                 output.accept(ModItems.DARKNESS_INGOT.get());
                                 output.accept(ModItems.DARKNESS_FRUIT.get());
                                 output.accept(ModItems.DARKNESS_FRUIT_DRIED.get());
                                 output.accept(ModItems.DARKNESS_ESSENCE.get());
+                                // Tools + Armor
+                                output.accept(ModItems.DARKNESS_AXE.get());
                             }))
                             .build());
 
@@ -45,18 +53,21 @@ public class CreativeModTabs {
                             .withTabsBefore(ELEM_CONV_DARKNESS.getKey())
                             .icon(() -> ModItems.LIGHT_ESSENCE.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
+                                // Blocks
                                 output.accept(ModBlocks.LIGHT_ORE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_NETHERRACK.get());
+                                output.accept(ModBlocks.LIGHT_TREE_LOG.get());
+                                output.accept(ModBlocks.LIGHT_TREE_PLANKS.get());
+                                output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
+                                output.accept(ModBlocks.LIGHT_FLOWER.get());
+                                // Items
                                 output.accept(ModItems.LIGHT_RAW.get());
                                 output.accept(ModItems.LIGHT_INGOT.get());
                                 output.accept(ModItems.LIGHT_FRUIT.get());
                                 output.accept(ModItems.LIGHT_FRUIT_DRIED.get());
                                 output.accept(ModItems.LIGHT_ESSENCE.get());
-                                output.accept(ModBlocks.LIGHT_TREE_LOG.get());
-                                output.accept(ModBlocks.LIGHT_TREE_PLANKS.get());
-                                output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
-                                output.accept(ModBlocks.LIGHT_FLOWER.get());
+                                // Tools + Armor
                             }))
                             .build());
 
@@ -65,7 +76,7 @@ public class CreativeModTabs {
             CREATIVE_TABS.register("elemconv_arcane", () ->
                     CreativeModeTab.builder()
                             .title(Component.translatable(ELEM_CONV_ARCANE_TITLE))
-                            .withTabsBefore(ELEM_CONV_DARKNESS.getKey())
+                            .withTabsBefore(ELEM_CONV_LIGHT.getKey())
                             .icon(() -> ModItems.DARKNESS_RAW.get().getDefaultInstance()) //TODO: Change for real icon later
                             .displayItems(((itemDisplay, output) -> {
                             }))

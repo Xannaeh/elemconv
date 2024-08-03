@@ -1,9 +1,9 @@
 package com.xannaeh.elemconv.main;
 
-import com.xannaeh.elemconv.initializers.block.ModBlocks;
+import com.xannaeh.elemconv.elements.block.ModBlocks;
 import com.xannaeh.elemconv.data.DataGenerators;
-import com.xannaeh.elemconv.initializers.item.ModItems;
-import com.xannaeh.elemconv.initializers.ui.CreativeModTabs;
+import com.xannaeh.elemconv.elements.item.ModItems;
+import com.xannaeh.elemconv.elements.ui.CreativeModTabs;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;

@@ -1,6 +1,6 @@
-package com.xannaeh.elemconv.initializers.block;
+package com.xannaeh.elemconv.elements.block;
 
-import com.xannaeh.elemconv.initializers.item.ModItems;
+import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

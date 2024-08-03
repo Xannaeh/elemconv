@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.initializers.item;
+package com.xannaeh.elemconv.elements.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
