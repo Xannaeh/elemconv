@@ -48,6 +48,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modFenceBlock(ModBlocks.DARKNESS_TREE_FENCE, ModBlocks.DARKNESS_TREE_PLANKS);
         modFenceGateBlock(ModBlocks.DARKNESS_TREE_FENCE_GATE, ModBlocks.DARKNESS_TREE_PLANKS);
         modWallBlock(ModBlocks.DARKNESS_TREE_WALL, ModBlocks.DARKNESS_TREE_PLANKS);
+        modDoorBlock(ModBlocks.DARKNESS_TREE_DOOR);
+        modTrapdoorBlock(ModBlocks.DARKNESS_TREE_TRAPDOOR);
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
         modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -64,6 +66,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modFenceBlock(ModBlocks.LIGHT_TREE_FENCE, ModBlocks.LIGHT_TREE_PLANKS);
         modFenceGateBlock(ModBlocks.LIGHT_TREE_FENCE_GATE, ModBlocks.LIGHT_TREE_PLANKS);
         modWallBlock(ModBlocks.LIGHT_TREE_WALL, ModBlocks.LIGHT_TREE_PLANKS);
+        modDoorBlock(ModBlocks.LIGHT_TREE_DOOR);
+        modTrapdoorBlock(ModBlocks.LIGHT_TREE_TRAPDOOR);
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
         modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.LIGHT_INFUSER_BASIC.get());
@@ -109,8 +113,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // You have to manually create the item!
     }
 
+    private void modDoorBlock(@NotNull DeferredBlock<Block> deferredBlock) {
+        String path = deferredBlock.getId().getPath();
+        String path_lower = path + "_top";
+        String path_upper = path + "_bottom";
+        doorBlockWithRenderType(((DoorBlock) deferredBlock.get()), modLoc("block/" + path_lower), modLoc("block/" + path_upper), "cutout");
+        // You have to manually create the item!
+    }
+
+    private void modTrapdoorBlock(@NotNull DeferredBlock<Block> deferredBlock) {
+        String path = deferredBlock.getId().getPath();
+        trapdoorBlockWithRenderType(((TrapDoorBlock) deferredBlock.get()), modLoc("block/" + path), true, "cutout");
+        modBlockItem(deferredBlock, "_bottom");
+    }
+
     private void modBlockItem(@NotNull DeferredBlock<Block> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(MODID + ":block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void modBlockItem(@NotNull DeferredBlock<Block> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(MODID + ":block/" + deferredBlock.getId().getPath() + appendix));
     }
 
 

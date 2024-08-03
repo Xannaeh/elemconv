@@ -126,6 +126,20 @@ public class ModBlocks {
                     .noCollission()
                     .lightLevel((state) -> 1))
     ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_DOOR = registerBlock("darkness_tree_door", () ->
+            new DoorBlock(BlockSetType.ACACIA,BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 1)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_TRAPDOOR = registerBlock("darkness_tree_trapdoor", () ->
+            new TrapDoorBlock(BlockSetType.ACACIA,BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 1)
+                    .strength(4))
+    ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_STAIRS = registerBlock("darkness_tree_stairs", () ->
             new StairBlock(ModBlocks.DARKNESS_TREE_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of()
@@ -135,13 +149,13 @@ public class ModBlocks {
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_FLOWER = registerBlock("darkness_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
-                    .lightLevel((state) -> 1)
-                    .strength(4))
+                    .noOcclusion()
+                    .lightLevel((state) -> 1))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_SAPLING = registerBlock("darkness_tree_sapling", () ->
-            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
-                    .lightLevel((state) -> 1)
-                    .strength(4))
+            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .lightLevel((state) -> 1))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_INFUSER_BASIC = registerBlock("darkness_infuser_basic", () ->
             new DarknessInfuserBasic(BlockBehaviour.Properties.of()
@@ -246,6 +260,20 @@ public class ModBlocks {
                     .lightLevel((state) -> 10)
                     .strength(4))
     ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_DOOR = registerBlock("light_tree_door", () ->
+            new DoorBlock(BlockSetType.ACACIA,BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_TRAPDOOR = registerBlock("light_tree_trapdoor", () ->
+            new TrapDoorBlock(BlockSetType.ACACIA,BlockBehaviour.Properties.of()
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_BUTTON = registerBlock("light_tree_button", () ->
             new ButtonBlock(BlockSetType.ACACIA, 10, BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
@@ -262,10 +290,12 @@ public class ModBlocks {
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_FLOWER = registerBlock("light_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
+                    .noOcclusion()
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_SAPLING = registerBlock("light_tree_sapling", () ->
-            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
+            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.of()
+                    .noOcclusion()
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_INFUSER_BASIC = registerBlock("light_infuser_basic", () ->

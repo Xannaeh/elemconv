@@ -50,10 +50,12 @@ public class ModItemStateProvider extends ItemModelProvider {
         modButtonItem(ModBlocks.DARKNESS_TREE_BUTTON, ModBlocks.DARKNESS_TREE_PLANKS);
         modFenceItem(ModBlocks.DARKNESS_TREE_FENCE, ModBlocks.DARKNESS_TREE_PLANKS);
         modWallItem(ModBlocks.DARKNESS_TREE_WALL, ModBlocks.DARKNESS_TREE_PLANKS);
+        basicItem(ModBlocks.DARKNESS_TREE_DOOR.asItem());
         // Light
         modButtonItem(ModBlocks.LIGHT_TREE_BUTTON, ModBlocks.LIGHT_TREE_PLANKS);
         modFenceItem(ModBlocks.LIGHT_TREE_FENCE, ModBlocks.LIGHT_TREE_PLANKS);
         modWallItem(ModBlocks.LIGHT_TREE_WALL, ModBlocks.LIGHT_TREE_PLANKS);
+        basicItem(ModBlocks.LIGHT_TREE_DOOR.asItem());
 
     }
 

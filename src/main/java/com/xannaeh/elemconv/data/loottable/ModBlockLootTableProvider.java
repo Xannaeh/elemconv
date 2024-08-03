@@ -56,6 +56,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARKNESS_TREE_FENCE.get());
         dropSelf(ModBlocks.DARKNESS_TREE_FENCE_GATE.get());
         dropSelf(ModBlocks.DARKNESS_TREE_WALL.get());
+        modDropDoor(ModBlocks.DARKNESS_TREE_DOOR.get());
+        dropSelf(ModBlocks.DARKNESS_TREE_TRAPDOOR.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SAPLING.get());
         dropSelf(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -73,6 +75,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_TREE_FENCE.get());
         dropSelf(ModBlocks.LIGHT_TREE_FENCE_GATE.get());
         dropSelf(ModBlocks.LIGHT_TREE_WALL.get());
+        modDropDoor(ModBlocks.LIGHT_TREE_DOOR.get());
+        dropSelf(ModBlocks.LIGHT_TREE_TRAPDOOR.get());
         dropSelf(ModBlocks.LIGHT_FLOWER.get());
         dropSelf(ModBlocks.LIGHT_TREE_SAPLING.get());
         dropSelf(ModBlocks.LIGHT_INFUSER_BASIC.get());
@@ -80,6 +84,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     protected void modDropSlab(Block pBlock) {
         add(pBlock, block -> createSlabItemTable(pBlock));
+    }
+    protected void modDropDoor(Block pBlock){
+        add(pBlock, block -> createDoorTable(pBlock));
     }
 
     protected LootTable.Builder modCreateMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

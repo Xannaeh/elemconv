@@ -125,6 +125,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
         wall(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.DARKNESS_TREE_WALL.get(),ModBlocks.DARKNESS_TREE_PLANKS.get());
+        doorBuilder(ModBlocks.DARKNESS_TREE_DOOR.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS))
+                .group("darkness_tree")
+                .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.DARKNESS_TREE_TRAPDOOR.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS))
+                .group("darkness_tree")
+                .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
         // Light
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_RAW_BLOCK.get(), 1)
                 .define('R', ModItems.LIGHT_RAW)
@@ -173,6 +181,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
         wall(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.LIGHT_TREE_WALL.get(),ModBlocks.LIGHT_TREE_PLANKS.get());
+        doorBuilder(ModBlocks.LIGHT_TREE_DOOR.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS))
+                .group("light_tree")
+                .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.LIGHT_TREE_TRAPDOOR.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS))
+                .group("light_tree")
+                .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+
 
         //Smeltables
         // Darkness
