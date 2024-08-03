@@ -24,13 +24,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE);
         modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE_DEEPSLATE);
         modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE_ENDSTONE);
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_RAW_BLOCK);
         // Light
         modSimpleBlockWithItem(ModBlocks.LIGHT_ORE);
         modSimpleBlockWithItem(ModBlocks.LIGHT_ORE_DEEPSLATE);
         modSimpleBlockWithItem(ModBlocks.LIGHT_ORE_NETHERRACK);
+        modSimpleBlockWithItem(ModBlocks.LIGHT_RAW_BLOCK);
 
         // Blocks
         // Darkness
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_INGOT_BLOCK);
         modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modSimpleWoodBlockWithItem(ModBlocks.DARKNESS_TREE_WOOD.get());
@@ -40,6 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
+        modSimpleBlockWithItem(ModBlocks.LIGHT_INGOT_BLOCK);
         modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
         modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
         modSimpleWoodBlockWithItem(ModBlocks.LIGHT_TREE_WOOD.get());
@@ -47,6 +51,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modPlanksSlabBlock(ModBlocks.LIGHT_TREE_SLAB.get());
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
         modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
+        modSideBottomTopBlock(ModBlocks.LIGHT_INFUSER_BASIC.get());
     }
 
     private void modSimpleBlockWithItem(DeferredBlock<Block> deferredBlock) {

@@ -43,6 +43,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         // Blocks
         // Darkness
+        dropSelf(ModBlocks.DARKNESS_INGOT_BLOCK.get());
+        dropSelf(ModBlocks.DARKNESS_RAW_BLOCK.get());
         dropSelf(ModBlocks.DARKNESS_TREE_LOG.get());
         dropSelf(ModBlocks.DARKNESS_TREE_WOOD.get());
         dropSelf(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
@@ -52,6 +54,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARKNESS_TREE_SAPLING.get());
         dropSelf(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
+        dropSelf(ModBlocks.LIGHT_INGOT_BLOCK.get());
+        dropSelf(ModBlocks.LIGHT_RAW_BLOCK.get());
         dropSelf(ModBlocks.LIGHT_TREE_LOG.get());
         dropSelf(ModBlocks.LIGHT_TREE_WOOD.get());
         dropSelf(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
@@ -59,6 +63,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_TREE_SLAB.get());
         dropSelf(ModBlocks.LIGHT_FLOWER.get());
         dropSelf(ModBlocks.LIGHT_TREE_SAPLING.get());
+        dropSelf(ModBlocks.LIGHT_INFUSER_BASIC.get());
     }
 
 

@@ -29,6 +29,8 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_ORE.get());
                                 output.accept(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.DARKNESS_ORE_ENDSTONE.get());
+                                output.accept(ModBlocks.DARKNESS_RAW_BLOCK.get());
+                                output.accept(ModBlocks.DARKNESS_INGOT_BLOCK.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_WOOD.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
@@ -63,6 +65,8 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.LIGHT_ORE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_NETHERRACK.get());
+                                output.accept(ModBlocks.LIGHT_RAW_BLOCK.get());
+                                output.accept(ModBlocks.LIGHT_INGOT_BLOCK.get());
                                 output.accept(ModBlocks.LIGHT_TREE_LOG.get());
                                 output.accept(ModBlocks.LIGHT_TREE_WOOD.get());
                                 output.accept(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
@@ -70,6 +74,7 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
                                 output.accept(ModBlocks.LIGHT_FLOWER.get());
                                 output.accept(ModBlocks.LIGHT_TREE_SAPLING.get());
+                                output.accept(ModBlocks.LIGHT_INFUSER_BASIC.get());
                                 // Items
                                 output.accept(ModItems.LIGHT_RAW.get());
                                 output.accept(ModItems.LIGHT_INGOT.get());
@@ -79,6 +84,7 @@ public class CreativeModTabs {
                                 output.accept(ModItems.LIGHT_IN_A_BOTTLE.get());
                                 output.accept(ModItems.LIGHT_COAL.get());
                                 // Tools + Armor
+                                output.accept(ModItems.LIGHT_AXE.get());
                             }))
                             .build());
 

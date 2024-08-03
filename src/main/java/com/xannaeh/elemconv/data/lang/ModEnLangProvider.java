@@ -2,8 +2,10 @@ package com.xannaeh.elemconv.data.lang;
 
 import com.xannaeh.elemconv.elements.block.ModBlocks;
 import com.xannaeh.elemconv.elements.block.custom.DarknessInfuserBasic;
+import com.xannaeh.elemconv.elements.block.custom.LightInfuserBasic;
 import com.xannaeh.elemconv.elements.item.ModItems;
 import com.xannaeh.elemconv.elements.item.custom.tools.DarknessAxeItem;
+import com.xannaeh.elemconv.elements.item.custom.tools.LightAxeItem;
 import com.xannaeh.elemconv.main.ElemConv;
 import com.xannaeh.elemconv.elements.ui.CreativeModTabs;
 import net.minecraft.data.PackOutput;
@@ -40,6 +42,8 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.DARKNESS_ORE, "Darkness ore");
         addBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE, "Darkness ore deepslate");
         addBlock(ModBlocks.DARKNESS_ORE_ENDSTONE, "Darkness ore endstone");
+        addBlock(ModBlocks.DARKNESS_INGOT_BLOCK, "Darkness ingot block");
+        addBlock(ModBlocks.DARKNESS_RAW_BLOCK, "Darkness raw block");
         addBlock(ModBlocks.DARKNESS_TREE_LOG, "Darkness tree log");
         addBlock(ModBlocks.DARKNESS_TREE_WOOD, "Darkness tree wood");
         addBlock(ModBlocks.DARKNESS_TREE_LOG_STRIPPED, "Darkness tree stripped log");
@@ -54,6 +58,8 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.LIGHT_ORE, "Light ore");
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");
         addBlock(ModBlocks.LIGHT_ORE_NETHERRACK, "Light ore netherrack");
+        addBlock(ModBlocks.LIGHT_INGOT_BLOCK, "Light ingot block");
+        addBlock(ModBlocks.LIGHT_RAW_BLOCK, "Light raw block");
         addBlock(ModBlocks.LIGHT_TREE_LOG, "Light tree log");
         addBlock(ModBlocks.LIGHT_TREE_WOOD, "Light tree wood");
         addBlock(ModBlocks.LIGHT_TREE_LOG_STRIPPED, "Light tree stripped log");
@@ -61,11 +67,19 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.LIGHT_TREE_SLAB, "Light tree slab");
         addBlock(ModBlocks.LIGHT_FLOWER, "Light flower");
         addBlock(ModBlocks.LIGHT_TREE_SAPLING, "Light tree sapling");
+        addBlock(ModBlocks.LIGHT_INFUSER_BASIC, "Light basic infuser");
+        add(LightInfuserBasic.SHIFT_TOOLTIP, "Press Shit for more Information!");
+        add(LightInfuserBasic.TOOLTIP_LINE_1, "To use a \"Light basic infuser\" throw the materials on top of the infuser.");
 
         // TOOLS + ARMORS
+        // Darkness
         addItem(ModItems.DARKNESS_AXE, "Darkness axe");
         add(DarknessAxeItem.SHIFT_TOOLTIP, "Press Shit for more Information!");
         add(DarknessAxeItem.TOOLTIP_LINE_1, "Use the \"Darkness infuser\" to transform a \"Golden axe\" into a \"Darkness axe\".");
+        // Light
+        addItem(ModItems.LIGHT_AXE, "Light axe");
+        add(LightAxeItem.SHIFT_TOOLTIP, "Press Shit for more Information!");
+        add(LightAxeItem.TOOLTIP_LINE_1, "Use a \"Light infuser\" to transform a \"Golden axe\" into a \"Light axe\".");
 
         // UI
         // CreativeTabs

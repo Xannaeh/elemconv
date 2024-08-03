@@ -1,6 +1,7 @@
 package com.xannaeh.elemconv.elements.item;
 
 import com.xannaeh.elemconv.elements.item.custom.tools.DarknessAxeItem;
+import com.xannaeh.elemconv.elements.item.custom.tools.LightAxeItem;
 import com.xannaeh.elemconv.elements.item.custom.foods.DarknessInABottleItem;
 import com.xannaeh.elemconv.elements.item.custom.fuel.FuelItem;
 import com.xannaeh.elemconv.main.ElemConv;
@@ -104,6 +105,12 @@ public class ModItems {
 
     );
     // Light
+    public static final DeferredItem<Item> LIGHT_AXE = ITEMS.registerItem("light_axe", LightAxeItem::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .durability(200)
+
+    );
 
     public static void register(IEventBus eventBus) {
         ModItems.ITEMS.register(eventBus);

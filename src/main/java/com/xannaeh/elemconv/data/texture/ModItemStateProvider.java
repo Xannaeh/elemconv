@@ -1,9 +1,7 @@
 package com.xannaeh.elemconv.data.texture;
 
 import com.xannaeh.elemconv.elements.item.ModItems;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -40,6 +38,7 @@ public class ModItemStateProvider extends ItemModelProvider {
         basicItem(ModItems.DARKNESS_AXE.get());
 
         // Light
+        basicItem(ModItems.LIGHT_AXE.get());
 
     }
 
