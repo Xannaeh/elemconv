@@ -3,7 +3,6 @@ package com.xannaeh.elemconv.main;
 import com.xannaeh.elemconv.initializers.block.ModBlocks;
 import com.xannaeh.elemconv.data.DataGenerators;
 import com.xannaeh.elemconv.initializers.item.ModItems;
-import com.xannaeh.elemconv.initializers.tag.ModTags;
 import com.xannaeh.elemconv.initializers.ui.CreativeModTabs;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -22,9 +21,9 @@ public class ElemConv {
 
     public ElemConv(IEventBus modEventBus, ModContainer modContainer) {
 
-        ModItems.ITEMS.register(modEventBus);
-        ModBlocks.BLOCKS.register(modEventBus);
-        CreativeModTabs.CREATIVE_TABS.register(modEventBus);
+        ModItems.register(modEventBus);
+        CreativeModTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(DataGenerators::gatherData);
         modEventBus.addListener(this::setup);

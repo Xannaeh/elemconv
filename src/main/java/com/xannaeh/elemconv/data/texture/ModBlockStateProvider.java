@@ -21,9 +21,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Darkness
         modNormalBlock(ModBlocks.DARKNESS_ORE.get());
         modNormalBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
+        modNormalBlock(ModBlocks.DARKNESS_ORE_ENDSTONE.get());
         // Light
         modNormalBlock(ModBlocks.LIGHT_ORE.get());
         modNormalBlock(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
+        modNormalBlock(ModBlocks.LIGHT_ORE_NETHERRACK.get());
 
         // Blocks
         // Darkness

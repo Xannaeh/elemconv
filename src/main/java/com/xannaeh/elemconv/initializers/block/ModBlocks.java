@@ -1,11 +1,13 @@
 package com.xannaeh.elemconv.initializers.block;
 
 import com.xannaeh.elemconv.initializers.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -18,7 +20,7 @@ public class ModBlocks {
 
     // Darkness
     public static final DeferredBlock<Block> DARKNESS_ORE = registerBlock("darkness_ore", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
                     .destroyTime(3.0f)
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
@@ -26,7 +28,15 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops())); //TODO: modify latter
 
     public static final DeferredBlock<Block> DARKNESS_ORE_DEEPSLATE = registerBlock("darkness_ore_deepslate", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
+                    .destroyTime(5.0f)
+                    .explosionResistance(10.0f)
+                    .sound(SoundType.METAL)
+                    .lightLevel((state) -> 1)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> DARKNESS_ORE_ENDSTONE = registerBlock("darkness_ore_endstone", () ->
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
                     .destroyTime(5.0f)
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
@@ -46,7 +56,7 @@ public class ModBlocks {
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY))); //TODO: modify latter
     // Light
     public static final DeferredBlock<Block> LIGHT_ORE = registerBlock("light_ore", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
                     .destroyTime(3.0f)
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
@@ -54,7 +64,15 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops())); //TODO: modify latter
 
     public static final DeferredBlock<Block> LIGHT_ORE_DEEPSLATE = registerBlock("light_ore_deepslate", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
+                    .destroyTime(5.0f)
+                    .explosionResistance(10.0f)
+                    .sound(SoundType.METAL)
+                    .lightLevel((state) -> 10)
+                    .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> LIGHT_ORE_NETHERRACK = registerBlock("light_ore_netherrack", () ->
+            new DropExperienceBlock(UniformInt.of(2, 5), BlockBehaviour.Properties.of()
                     .destroyTime(5.0f)
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
@@ -77,10 +95,18 @@ public class ModBlocks {
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
                     .lightLevel((state) -> 10))); //TODO: modify latter
 
-    public static DeferredBlock<Block> registerBlock(String name, Supplier<Block> block) {
-        DeferredBlock<Block> blockReg = BLOCKS.register(name, block);
-        ModItems.ITEMS.register(name, () -> new BlockItem(blockReg.get(), new Item.Properties()));
+    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> blockReg = BLOCKS.register(name, block);
+        registerBlockItem(name, blockReg);
         return blockReg;
     }
 
+    public static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+
+    public static void register(IEventBus eventBus) {
+        ModBlocks.BLOCKS.register(eventBus);
+    }
 }

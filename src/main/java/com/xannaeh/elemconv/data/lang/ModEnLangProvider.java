@@ -33,6 +33,7 @@ public class ModEnLangProvider extends LanguageProvider {
         // Darkness
         addBlock(ModBlocks.DARKNESS_ORE, "Darkness ore");
         addBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE, "Darkness ore deepslate");
+        addBlock(ModBlocks.DARKNESS_ORE_ENDSTONE, "Darkness ore endstone");
         addBlock(ModBlocks.DARKNESS_TREE_LOG, "Darkness tree log");
         addBlock(ModBlocks.DARKNESS_TREE_PLANKS, "Darkness tree planks");
         addBlock(ModBlocks.DARKNESS_TREE_SLAB, "Darkness tree slab");
@@ -40,6 +41,7 @@ public class ModEnLangProvider extends LanguageProvider {
         // Light
         addBlock(ModBlocks.LIGHT_ORE, "Light ore");
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");
+        addBlock(ModBlocks.LIGHT_ORE_NETHERRACK, "Light ore netherrack");
         addBlock(ModBlocks.LIGHT_TREE_LOG, "Light tree log");
         addBlock(ModBlocks.LIGHT_TREE_PLANKS, "Light tree planks");
         addBlock(ModBlocks.LIGHT_TREE_SLAB, "Light tree slab");

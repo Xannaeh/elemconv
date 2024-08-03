@@ -26,9 +26,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Darkness
         add(ModBlocks.DARKNESS_ORE.get(), createOreDrop(ModBlocks.DARKNESS_ORE.get(), ModItems.DARKNESS_RAW.get()));
         add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.DARKNESS_ORE_DEEPSLATE.get(), ModItems.DARKNESS_RAW.get()));
+        add(ModBlocks.DARKNESS_ORE_ENDSTONE.get(), createOreDrop(ModBlocks.DARKNESS_ORE_ENDSTONE.get(), ModItems.DARKNESS_RAW.get()));
         // Light
         add(ModBlocks.LIGHT_ORE.get(), createOreDrop(ModBlocks.LIGHT_ORE.get(), ModItems.LIGHT_RAW.get()));
         add(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), ModItems.LIGHT_RAW.get()));
+        add(ModBlocks.LIGHT_ORE_NETHERRACK.get(), createOreDrop(ModBlocks.LIGHT_ORE_NETHERRACK.get(), ModItems.LIGHT_RAW.get()));
 
 
         // Blocks
