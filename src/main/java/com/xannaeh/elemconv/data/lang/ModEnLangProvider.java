@@ -1,7 +1,9 @@
 package com.xannaeh.elemconv.data.lang;
 
 import com.xannaeh.elemconv.elements.block.ModBlocks;
+import com.xannaeh.elemconv.elements.block.custom.DarknessInfuserBasic;
 import com.xannaeh.elemconv.elements.item.ModItems;
+import com.xannaeh.elemconv.elements.item.custom.tools.DarknessAxeItem;
 import com.xannaeh.elemconv.main.ElemConv;
 import com.xannaeh.elemconv.elements.ui.CreativeModTabs;
 import net.minecraft.data.PackOutput;
@@ -43,6 +45,8 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.DARKNESS_TREE_SLAB, "Darkness tree slab");
         addBlock(ModBlocks.DARKNESS_FLOWER, "Darkness flower");
         addBlock(ModBlocks.DARKNESS_INFUSER_BASIC, "Darkness basic infuser");
+        add(DarknessInfuserBasic.SHIFT_TOOLTIP, "Press Shit for more Information!");
+        add(DarknessInfuserBasic.TOOLTIP_LINE_1, "To use the \"Darkness basic infuser\" throw the materials on top of the infuser.");
         // Light
         addBlock(ModBlocks.LIGHT_ORE, "Light ore");
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");
@@ -54,6 +58,8 @@ public class ModEnLangProvider extends LanguageProvider {
 
         // TOOLS + ARMORS
         addItem(ModItems.DARKNESS_AXE, "Darkness axe");
+        add(DarknessAxeItem.SHIFT_TOOLTIP, "Press Shit for more Information!");
+        add(DarknessAxeItem.TOOLTIP_LINE_1, "Use the \"Darkness infuser\" to transform a \"Golden axe\" into a \"Darkness axe\".");
 
         // UI
         // CreativeTabs

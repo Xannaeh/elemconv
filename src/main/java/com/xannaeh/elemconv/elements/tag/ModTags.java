@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+
 import static com.xannaeh.elemconv.main.ElemConv.MODID;
 
 public class ModTags {
@@ -29,6 +30,7 @@ public class ModTags {
     public static TagKey<Block> createToolTag(String name) {
         return TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(MODID, name));
     }
+
     public class ModItemTags {
         // Items
         // Darkness
@@ -43,6 +45,10 @@ public class ModTags {
         public static final TagKey<Item> LIGHT_ORE_TAG = ItemTags.create(createRawItemsLocation("light_ore"));
         public static final TagKey<Item> LIGHT_ORE_DEEPSLATE_TAG = ItemTags.create(createRawItemsLocation("light_ore_deepslate"));
 
+        private static TagKey<Item> createTag(String name) {
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(MODID, name));
+        }
+
     }
 
     public class ModBlockTags {
@@ -52,6 +58,11 @@ public class ModTags {
         // Light
         public static final TagKey<Block> LIGHT_ORE_TAG = BlockTags.create(ModTags.createOreLocation("light_ore"));
         public static final TagKey<Block> LIGHT_ORE_DEEPSLATE_TAG = BlockTags.create(ModTags.createOreLocation("light_ore_deepslate"));
+
+
+        private static TagKey<Block> createTag(String name) {
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(MODID, name));
+        }
     }
 
 }
