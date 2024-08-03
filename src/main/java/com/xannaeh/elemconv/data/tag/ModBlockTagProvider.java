@@ -47,10 +47,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_AXE)
                 // Darkness
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
+                .add(ModBlocks.DARKNESS_TREE_WOOD.get())
+                .add(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
                 // Light
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
+                .add(ModBlocks.LIGHT_TREE_WOOD.get())
+                .add(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
                 .add(ModBlocks.LIGHT_TREE_SLAB.get());
 
@@ -60,6 +64,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get())
                 .add(ModBlocks.DARKNESS_ORE_ENDSTONE.get())
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
+                .add(ModBlocks.DARKNESS_TREE_WOOD.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
                 // Light
@@ -67,6 +72,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
                 .add(ModBlocks.LIGHT_ORE_NETHERRACK.get())
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
+                .add(ModBlocks.LIGHT_TREE_WOOD.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
                 .add(ModBlocks.LIGHT_TREE_SLAB.get());
 

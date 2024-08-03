@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -46,6 +47,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DARKNESS_TREE_LOG = registerBlock("darkness_tree_log", () ->
             new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG)
                     .requiresCorrectToolForDrops())); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_WOOD = registerBlock("darkness_tree_wood", () ->
+            new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD)
+                    .requiresCorrectToolForDrops())); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_LOG_STRIPPED = registerBlock("darkness_tree_log_stripped", () ->
+            new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_LOG)
+                    .requiresCorrectToolForDrops())); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_PLANKS = registerBlock("darkness_tree_planks", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)
                     .requiresCorrectToolForDrops())); //TODO: modify latter
@@ -54,6 +61,8 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops())); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_FLOWER = registerBlock("darkness_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY))); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_SAPLING = registerBlock("darkness_tree_sapling", () ->
+            new SaplingBlock(TreeGrower.ACACIA,BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING))); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_INFUSER_BASIC = registerBlock("darkness_infuser_basic", () ->
             new DarknessInfuserBasic(BlockBehaviour.Properties.of()
                     .destroyTime(5.0f)
@@ -88,6 +97,13 @@ public class ModBlocks {
             new LightTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG)
                     .requiresCorrectToolForDrops()
                     .lightLevel((state) -> 10))); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_WOOD = registerBlock("light_tree_wood", () ->
+            new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD)
+                    .requiresCorrectToolForDrops())); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_LOG_STRIPPED = registerBlock("light_tree_log_stripped", () ->
+            new LightTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_LOG)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10))); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_PLANKS = registerBlock("light_tree_planks", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)
                     .requiresCorrectToolForDrops()
@@ -99,6 +115,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LIGHT_FLOWER = registerBlock("light_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
                     .lightLevel((state) -> 10))); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_SAPLING = registerBlock("light_tree_sapling", () ->
+            new SaplingBlock(TreeGrower.ACACIA,BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING))); //TODO: modify latter
 
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

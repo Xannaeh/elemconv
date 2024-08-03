@@ -41,9 +41,12 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE, "Darkness ore deepslate");
         addBlock(ModBlocks.DARKNESS_ORE_ENDSTONE, "Darkness ore endstone");
         addBlock(ModBlocks.DARKNESS_TREE_LOG, "Darkness tree log");
+        addBlock(ModBlocks.DARKNESS_TREE_WOOD, "Darkness tree wood");
+        addBlock(ModBlocks.DARKNESS_TREE_LOG_STRIPPED, "Darkness tree stripped log");
         addBlock(ModBlocks.DARKNESS_TREE_PLANKS, "Darkness tree planks");
         addBlock(ModBlocks.DARKNESS_TREE_SLAB, "Darkness tree slab");
         addBlock(ModBlocks.DARKNESS_FLOWER, "Darkness flower");
+        addBlock(ModBlocks.DARKNESS_TREE_SAPLING, "Darkness tree sapling");
         addBlock(ModBlocks.DARKNESS_INFUSER_BASIC, "Darkness basic infuser");
         add(DarknessInfuserBasic.SHIFT_TOOLTIP, "Press Shit for more Information!");
         add(DarknessInfuserBasic.TOOLTIP_LINE_1, "To use the \"Darkness basic infuser\" throw the materials on top of the infuser.");
@@ -52,9 +55,12 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");
         addBlock(ModBlocks.LIGHT_ORE_NETHERRACK, "Light ore netherrack");
         addBlock(ModBlocks.LIGHT_TREE_LOG, "Light tree log");
+        addBlock(ModBlocks.LIGHT_TREE_WOOD, "Light tree wood");
+        addBlock(ModBlocks.LIGHT_TREE_LOG_STRIPPED, "Light tree stripped log");
         addBlock(ModBlocks.LIGHT_TREE_PLANKS, "Light tree planks");
         addBlock(ModBlocks.LIGHT_TREE_SLAB, "Light tree slab");
         addBlock(ModBlocks.LIGHT_FLOWER, "Light flower");
+        addBlock(ModBlocks.LIGHT_TREE_SAPLING, "Light tree sapling");
 
         // TOOLS + ARMORS
         addItem(ModItems.DARKNESS_AXE, "Darkness axe");

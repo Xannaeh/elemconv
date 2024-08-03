@@ -50,6 +50,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.DARKNESS_TREE_LOG.get())
                 .unlockedBy("has_darkness_tree_log", has(ModBlocks.DARKNESS_TREE_LOG.get()))
                 .save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARKNESS_TREE_PLANKS.get(), 4)
+                .requires(ModBlocks.DARKNESS_TREE_WOOD.get())
+                .unlockedBy("has_darkness_tree_wood", has(ModBlocks.DARKNESS_TREE_WOOD.get()))
+                .save(pRecipeOutput,MODID+":darkness_tree_planks_2");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARKNESS_TREE_WOOD.get(), 3)
+                .define('L', ModBlocks.DARKNESS_TREE_LOG)
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_darkness_tree_log", has(ModBlocks.DARKNESS_TREE_LOG.get()))
+                .save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARKNESS_TREE_SLAB.get(), 6)
                 .define('P', ModBlocks.DARKNESS_TREE_PLANKS)
                 .pattern("PPP")
@@ -59,6 +69,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_PLANKS.get(), 4)
                 .requires(ModBlocks.LIGHT_TREE_LOG.get())
                 .unlockedBy("has_light_tree_log", has(ModBlocks.LIGHT_TREE_LOG.get()))
+                .save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_PLANKS.get(), 4)
+                .requires(ModBlocks.LIGHT_TREE_WOOD.get())
+                .unlockedBy("has_light_tree_wood", has(ModBlocks.LIGHT_TREE_WOOD.get()))
+                .save(pRecipeOutput,MODID+":light_tree_planks_2");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_WOOD.get(), 3)
+                .define('L', ModBlocks.LIGHT_TREE_LOG)
+                .pattern("LL")
+                .pattern("LL")
+                .unlockedBy("has_darkness_tree_log", has(ModBlocks.LIGHT_TREE_LOG.get()))
                 .save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_SLAB.get(), 6)
                 .define('P', ModBlocks.LIGHT_TREE_PLANKS)

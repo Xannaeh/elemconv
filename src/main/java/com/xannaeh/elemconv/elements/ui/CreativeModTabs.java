@@ -30,9 +30,12 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.DARKNESS_ORE_ENDSTONE.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_WOOD.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
                                 output.accept(ModBlocks.DARKNESS_FLOWER.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_SAPLING.get());
                                 output.accept(ModBlocks.DARKNESS_INFUSER_BASIC.get());
                                 // Items
                                 output.accept(ModItems.DARKNESS_RAW.get());
@@ -61,9 +64,12 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
                                 output.accept(ModBlocks.LIGHT_ORE_NETHERRACK.get());
                                 output.accept(ModBlocks.LIGHT_TREE_LOG.get());
+                                output.accept(ModBlocks.LIGHT_TREE_WOOD.get());
+                                output.accept(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
                                 output.accept(ModBlocks.LIGHT_TREE_PLANKS.get());
                                 output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
                                 output.accept(ModBlocks.LIGHT_FLOWER.get());
+                                output.accept(ModBlocks.LIGHT_TREE_SAPLING.get());
                                 // Items
                                 output.accept(ModItems.LIGHT_RAW.get());
                                 output.accept(ModItems.LIGHT_INGOT.get());

@@ -33,18 +33,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Darkness
         modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
+        modSimpleWoodBlockWithItem(ModBlocks.DARKNESS_TREE_WOOD.get());
+        modLogBlock(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
         modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
+        modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
         modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
         modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
+        modSimpleWoodBlockWithItem(ModBlocks.LIGHT_TREE_WOOD.get());
+        modLogBlock(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
         modPlanksSlabBlock(ModBlocks.LIGHT_TREE_SLAB.get());
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
+        modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
     }
 
     private void modSimpleBlockWithItem(DeferredBlock<Block> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    }
+    private void modSimpleWoodBlockWithItem(Block block) {
+        ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
+        String path = blockKey.getPath();
+        String path_log = path.replace("wood","log");
+        simpleBlock(block, models().cubeColumn(path, modLoc("block/" + path_log), modLoc("block/" + path_log)));
+//        simpleBlock(block, models().cubeColumnHorizontal(path, modLoc("block/" + path), modLoc("block/" + path)));
+        simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
     }
 
     private void modSideBottomTopBlock(Block block) {
