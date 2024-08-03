@@ -48,14 +48,28 @@ public class ModItemStateProvider extends ItemModelProvider {
         // Blocks
         // Darkness
         modButtonItem(ModBlocks.DARKNESS_TREE_BUTTON, ModBlocks.DARKNESS_TREE_PLANKS);
+        modFenceItem(ModBlocks.DARKNESS_TREE_FENCE, ModBlocks.DARKNESS_TREE_PLANKS);
+        modWallItem(ModBlocks.DARKNESS_TREE_WALL, ModBlocks.DARKNESS_TREE_PLANKS);
         // Light
         modButtonItem(ModBlocks.LIGHT_TREE_BUTTON, ModBlocks.LIGHT_TREE_PLANKS);
+        modFenceItem(ModBlocks.LIGHT_TREE_FENCE, ModBlocks.LIGHT_TREE_PLANKS);
+        modWallItem(ModBlocks.LIGHT_TREE_WALL, ModBlocks.LIGHT_TREE_PLANKS);
 
     }
 
     public void modButtonItem(@NotNull DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
                 .texture("texture", ResourceLocation.fromNamespaceAndPath(MODID, "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void modFenceItem(@NotNull DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(MODID, "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void modWallItem(@NotNull DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall", ResourceLocation.fromNamespaceAndPath(MODID, "block/" + baseBlock.getId().getPath()));
     }
 
 }

@@ -39,6 +39,9 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_TREE_STAIRS.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_PRESSURE_PLATE.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_BUTTON.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_FENCE.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_FENCE_GATE.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_WALL.get());
                                 output.accept(ModBlocks.DARKNESS_FLOWER.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_SAPLING.get());
                                 output.accept(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -78,6 +81,9 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.LIGHT_TREE_STAIRS.get());
                                 output.accept(ModBlocks.LIGHT_TREE_PRESSURE_PLATE.get());
                                 output.accept(ModBlocks.LIGHT_TREE_BUTTON.get());
+                                output.accept(ModBlocks.LIGHT_TREE_FENCE.get());
+                                output.accept(ModBlocks.LIGHT_TREE_FENCE_GATE.get());
+                                output.accept(ModBlocks.LIGHT_TREE_WALL.get());
                                 output.accept(ModBlocks.LIGHT_FLOWER.get());
                                 output.accept(ModBlocks.LIGHT_TREE_SAPLING.get());
                                 output.accept(ModBlocks.LIGHT_INFUSER_BASIC.get());

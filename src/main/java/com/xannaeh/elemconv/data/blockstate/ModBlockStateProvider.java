@@ -45,6 +45,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modStairsBlock(ModBlocks.DARKNESS_TREE_STAIRS, ModBlocks.DARKNESS_TREE_PLANKS);
         modPressurePlate(ModBlocks.DARKNESS_TREE_PRESSURE_PLATE, ModBlocks.DARKNESS_TREE_PLANKS);
         modButton(ModBlocks.DARKNESS_TREE_BUTTON, ModBlocks.DARKNESS_TREE_PLANKS);
+        modFenceBlock(ModBlocks.DARKNESS_TREE_FENCE, ModBlocks.DARKNESS_TREE_PLANKS);
+        modFenceGateBlock(ModBlocks.DARKNESS_TREE_FENCE_GATE, ModBlocks.DARKNESS_TREE_PLANKS);
+        modWallBlock(ModBlocks.DARKNESS_TREE_WALL, ModBlocks.DARKNESS_TREE_PLANKS);
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
         modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -58,6 +61,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modStairsBlock(ModBlocks.LIGHT_TREE_STAIRS, ModBlocks.LIGHT_TREE_PLANKS);
         modPressurePlate(ModBlocks.LIGHT_TREE_PRESSURE_PLATE, ModBlocks.LIGHT_TREE_PLANKS);
         modButton(ModBlocks.LIGHT_TREE_BUTTON, ModBlocks.LIGHT_TREE_PLANKS);
+        modFenceBlock(ModBlocks.LIGHT_TREE_FENCE, ModBlocks.LIGHT_TREE_PLANKS);
+        modFenceGateBlock(ModBlocks.LIGHT_TREE_FENCE_GATE, ModBlocks.LIGHT_TREE_PLANKS);
+        modWallBlock(ModBlocks.LIGHT_TREE_WALL, ModBlocks.LIGHT_TREE_PLANKS);
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
         modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.LIGHT_INFUSER_BASIC.get());
@@ -85,6 +91,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void modButton(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
         buttonBlock(((ButtonBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        // You have to manually create the item!
+    }
+
+    private void modFenceBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        fenceBlock(((FenceBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        // You have to manually create the item!
+    }
+
+    private void modFenceGateBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        fenceGateBlock(((FenceGateBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        modBlockItem(deferredBlock);
+    }
+
+    private void modWallBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        wallBlock(((WallBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
         // You have to manually create the item!
     }
 

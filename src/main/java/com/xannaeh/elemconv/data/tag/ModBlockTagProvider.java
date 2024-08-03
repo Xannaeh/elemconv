@@ -80,5 +80,29 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_TREE_SLAB.get())
                 .add(ModBlocks.LIGHT_TREE_STAIRS.get());
 
+        tag(BlockTags.WOODEN_FENCES)
+                // Darkness
+                .add(ModBlocks.DARKNESS_TREE_FENCE.get())
+                // Light
+                .add(ModBlocks.LIGHT_TREE_FENCE.get());
+
+//        tag(BlockTags.FENCES) // these are not "fences" are wooden
+//                // Darkness
+//                .add(ModBlocks.DARKNESS_TREE_FENCE.get())
+//                // Light
+//                .add(ModBlocks.LIGHT_TREE_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                // Darkness
+                .add(ModBlocks.DARKNESS_TREE_FENCE_GATE.get())
+                // Light
+                .add(ModBlocks.LIGHT_TREE_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS)
+                // Darkness
+                .add(ModBlocks.DARKNESS_TREE_WALL.get())
+                // Light
+                .add(ModBlocks.LIGHT_TREE_WALL.get());
+
     }
 }

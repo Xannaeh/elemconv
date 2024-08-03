@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -97,7 +98,25 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DARKNESS_TREE_PRESSURE_PLATE = registerBlock("darkness_tree_pressure_plate", () ->
             new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
-                    .lightLevel((state) -> 10)
+                    .lightLevel((state) -> 1)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_FENCE = registerBlock("darkness_tree_fence", () ->
+            new FenceBlock(BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 1)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_FENCE_GATE = registerBlock("darkness_tree_fence_gate", () ->
+            new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 1)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_WALL = registerBlock("darkness_tree_wall", () ->
+            new WallBlock(BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 1)
                     .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_BUTTON = registerBlock("darkness_tree_button", () ->
@@ -105,7 +124,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(4)
                     .noCollission()
-                    .lightLevel((state) -> 10))
+                    .lightLevel((state) -> 1))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_STAIRS = registerBlock("darkness_tree_stairs", () ->
             new StairBlock(ModBlocks.DARKNESS_TREE_PLANKS.get().defaultBlockState(),
@@ -205,6 +224,24 @@ public class ModBlocks {
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_PRESSURE_PLATE = registerBlock("light_tree_pressure_plate", () ->
             new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_FENCE = registerBlock("light_tree_fence", () ->
+            new FenceBlock(BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_FENCE_GATE = registerBlock("light_tree_fence_gate", () ->
+            new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_WALL = registerBlock("light_tree_wall", () ->
+            new WallBlock(BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
                     .lightLevel((state) -> 10)
                     .strength(4))

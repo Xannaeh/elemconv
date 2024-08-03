@@ -116,6 +116,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("darkness_tree")
                 .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
+        fenceBuilder(ModBlocks.DARKNESS_TREE_FENCE.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS))
+                .group("darkness_tree")
+                .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.DARKNESS_TREE_FENCE_GATE.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS))
+                .group("darkness_tree")
+                .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        wall(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.DARKNESS_TREE_WALL.get(),ModBlocks.DARKNESS_TREE_PLANKS.get());
         // Light
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_RAW_BLOCK.get(), 1)
                 .define('R', ModItems.LIGHT_RAW)
@@ -155,6 +164,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("light_tree")
                 .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
+        fenceBuilder(ModBlocks.LIGHT_TREE_FENCE.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS))
+                .group("light_tree")
+                .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.LIGHT_TREE_FENCE_GATE.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS))
+                .group("light_tree")
+                .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        wall(pRecipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.LIGHT_TREE_WALL.get(),ModBlocks.LIGHT_TREE_PLANKS.get());
 
         //Smeltables
         // Darkness
