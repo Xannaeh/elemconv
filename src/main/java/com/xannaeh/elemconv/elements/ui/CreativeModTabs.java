@@ -36,6 +36,7 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
+                                output.accept(ModBlocks.DARKNESS_TREE_STAIRS.get());
                                 output.accept(ModBlocks.DARKNESS_FLOWER.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_SAPLING.get());
                                 output.accept(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -72,6 +73,7 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
                                 output.accept(ModBlocks.LIGHT_TREE_PLANKS.get());
                                 output.accept(ModBlocks.LIGHT_TREE_SLAB.get());
+                                output.accept(ModBlocks.LIGHT_TREE_STAIRS.get());
                                 output.accept(ModBlocks.LIGHT_FLOWER.get());
                                 output.accept(ModBlocks.LIGHT_TREE_SAPLING.get());
                                 output.accept(ModBlocks.LIGHT_INFUSER_BASIC.get());

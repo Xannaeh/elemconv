@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.data.texture;
+package com.xannaeh.elemconv.data.blockstate;
 
 import com.xannaeh.elemconv.elements.block.ModBlocks;
 import net.minecraft.client.renderer.RenderType;
@@ -6,9 +6,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import org.jetbrains.annotations.NotNull;
 
 import static com.xannaeh.elemconv.main.ElemConv.MODID;
 
@@ -34,33 +38,52 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Blocks
         // Darkness
         modSimpleBlockWithItem(ModBlocks.DARKNESS_INGOT_BLOCK);
-        modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modSimpleWoodBlockWithItem(ModBlocks.DARKNESS_TREE_WOOD.get());
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
-        modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
+        modSlabBlock(ModBlocks.DARKNESS_TREE_SLAB, ModBlocks.DARKNESS_TREE_PLANKS);
+        modStairsBlock(ModBlocks.DARKNESS_TREE_STAIRS, ModBlocks.DARKNESS_TREE_PLANKS);
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
         modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
         modSimpleBlockWithItem(ModBlocks.LIGHT_INGOT_BLOCK);
-        modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
         modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
         modSimpleWoodBlockWithItem(ModBlocks.LIGHT_TREE_WOOD.get());
         modLogBlock(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
-        modPlanksSlabBlock(ModBlocks.LIGHT_TREE_SLAB.get());
+        modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
+        modSlabBlock(ModBlocks.LIGHT_TREE_SLAB, ModBlocks.LIGHT_TREE_PLANKS);
+        modStairsBlock(ModBlocks.LIGHT_TREE_STAIRS, ModBlocks.LIGHT_TREE_PLANKS);
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
         modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.LIGHT_INFUSER_BASIC.get());
     }
 
-    private void modSimpleBlockWithItem(DeferredBlock<Block> deferredBlock) {
+    private void modSimpleBlockWithItem(@NotNull DeferredBlock<Block> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
+
+
+    private void modSlabBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        slabBlock(((SlabBlock) deferredBlock.get()), blockTexture(textureBlock.get()), blockTexture(textureBlock.get()));
+        modBlockItem(deferredBlock);
+    }
+
+    private void modStairsBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        stairsBlock(((StairBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        modBlockItem(deferredBlock);
+    }
+
+    private void modBlockItem(@NotNull DeferredBlock<Block> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(MODID + ":block/" + deferredBlock.getId().getPath()));
+    }
+
+
     private void modSimpleWoodBlockWithItem(Block block) {
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
         String path = blockKey.getPath();
-        String path_log = path.replace("wood","log");
+        String path_log = path.replace("wood", "log");
         simpleBlock(block, models().cubeColumn(path, modLoc("block/" + path_log), modLoc("block/" + path_log)));
 //        simpleBlock(block, models().cubeColumnHorizontal(path, modLoc("block/" + path), modLoc("block/" + path)));
         simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
@@ -85,14 +108,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
     }
 
-    private void modPlanksSlabBlock(Block block) {
-        ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
-        String path = blockKey.getPath();
-        String pathFullBlock = path.replace("_slab", "_planks");
-        simpleBlock(block, models().slab(path, modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock), modLoc("block/" + pathFullBlock)));
-//        simpleBlock(block, models().slabTop(path, modLoc("block/" + path), modLoc("block/" + path), modLoc("block/" + path)));
-        simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
-    }
 
     private void modCrossBlock(Block block) {
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);

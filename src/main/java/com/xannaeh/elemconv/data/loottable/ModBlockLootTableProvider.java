@@ -49,7 +49,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARKNESS_TREE_WOOD.get());
         dropSelf(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
-        dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());
+        add(ModBlocks.DARKNESS_TREE_SLAB.get(), block -> createSlabItemTable(ModBlocks.DARKNESS_TREE_SLAB.get()));
+        dropSelf(ModBlocks.DARKNESS_TREE_STAIRS.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SAPLING.get());
         dropSelf(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -60,7 +61,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_TREE_WOOD.get());
         dropSelf(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
         dropSelf(ModBlocks.LIGHT_TREE_PLANKS.get());
-        dropSelf(ModBlocks.LIGHT_TREE_SLAB.get());
+        add(ModBlocks.LIGHT_TREE_SLAB.get(), block -> createSlabItemTable(ModBlocks.LIGHT_TREE_SLAB.get()));
+        dropSelf(ModBlocks.LIGHT_TREE_STAIRS.get());
         dropSelf(ModBlocks.LIGHT_FLOWER.get());
         dropSelf(ModBlocks.LIGHT_TREE_SAPLING.get());
         dropSelf(ModBlocks.LIGHT_INFUSER_BASIC.get());

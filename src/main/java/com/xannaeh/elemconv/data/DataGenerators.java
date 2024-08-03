@@ -2,16 +2,14 @@ package com.xannaeh.elemconv.data;
 
 import com.xannaeh.elemconv.data.lang.ModEnLangProvider;
 import com.xannaeh.elemconv.data.loottable.ModBlockLootTableProvider;
-import com.xannaeh.elemconv.data.loottable.ModLootTableProvider;
 import com.xannaeh.elemconv.data.recipe.ModRecipeProvider;
 import com.xannaeh.elemconv.data.tag.ModBlockTagProvider;
 import com.xannaeh.elemconv.data.tag.ModItemTagProvider;
-import com.xannaeh.elemconv.data.texture.ModBlockStateProvider;
-import com.xannaeh.elemconv.data.texture.ModItemStateProvider;
+import com.xannaeh.elemconv.data.blockstate.ModBlockStateProvider;
+import com.xannaeh.elemconv.data.blockstate.ModItemStateProvider;
 import com.xannaeh.elemconv.data.worldgen.ModWorldGenProvider;
 import com.xannaeh.elemconv.main.ElemConv;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;

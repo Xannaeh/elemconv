@@ -49,6 +49,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.DARKNESS_TREE_LOG_STRIPPED, "Darkness tree stripped log");
         addBlock(ModBlocks.DARKNESS_TREE_PLANKS, "Darkness tree planks");
         addBlock(ModBlocks.DARKNESS_TREE_SLAB, "Darkness tree slab");
+        addBlock(ModBlocks.DARKNESS_TREE_STAIRS, "Darkness tree stairs");
         addBlock(ModBlocks.DARKNESS_FLOWER, "Darkness flower");
         addBlock(ModBlocks.DARKNESS_TREE_SAPLING, "Darkness tree sapling");
         addBlock(ModBlocks.DARKNESS_INFUSER_BASIC, "Darkness basic infuser");
@@ -65,6 +66,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.LIGHT_TREE_LOG_STRIPPED, "Light tree stripped log");
         addBlock(ModBlocks.LIGHT_TREE_PLANKS, "Light tree planks");
         addBlock(ModBlocks.LIGHT_TREE_SLAB, "Light tree slab");
+        addBlock(ModBlocks.LIGHT_TREE_STAIRS, "Light tree stairs");
         addBlock(ModBlocks.LIGHT_FLOWER, "Light flower");
         addBlock(ModBlocks.LIGHT_TREE_SAPLING, "Light tree sapling");
         addBlock(ModBlocks.LIGHT_INFUSER_BASIC, "Light basic infuser");

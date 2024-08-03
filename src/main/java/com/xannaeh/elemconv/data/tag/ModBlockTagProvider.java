@@ -51,12 +51,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                .add(ModBlocks.DARKNESS_TREE_STAIRS.get())
                 // Light
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
                 .add(ModBlocks.LIGHT_TREE_WOOD.get())
                 .add(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
-                .add(ModBlocks.LIGHT_TREE_SLAB.get());
+                .add(ModBlocks.LIGHT_TREE_SLAB.get())
+                .add(ModBlocks.LIGHT_TREE_STAIRS.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 // Darkness
@@ -67,6 +69,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DARKNESS_TREE_WOOD.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                .add(ModBlocks.DARKNESS_TREE_STAIRS.get())
                 // Light
                 .add(ModBlocks.LIGHT_ORE.get())
                 .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
@@ -74,7 +77,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
                 .add(ModBlocks.LIGHT_TREE_WOOD.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
-                .add(ModBlocks.LIGHT_TREE_SLAB.get());
+                .add(ModBlocks.LIGHT_TREE_SLAB.get())
+                .add(ModBlocks.LIGHT_TREE_STAIRS.get());
 
     }
 }

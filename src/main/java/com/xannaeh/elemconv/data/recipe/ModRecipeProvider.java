@@ -106,9 +106,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("LL")
                 .unlockedBy("has_darkness_tree_log", has(ModBlocks.DARKNESS_TREE_LOG.get()))
                 .save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARKNESS_TREE_SLAB.get(), 6)
-                .define('P', ModBlocks.DARKNESS_TREE_PLANKS)
-                .pattern("PPP")
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARKNESS_TREE_SLAB.get(), ModBlocks.DARKNESS_TREE_PLANKS.get());
+        stairBuilder(ModBlocks.DARKNESS_TREE_STAIRS.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .group("darkness_tree")
                 .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
         // Light
@@ -138,14 +138,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('L', ModBlocks.LIGHT_TREE_LOG)
                 .pattern("LL")
                 .pattern("LL")
-                .unlockedBy("has_darkness_tree_log", has(ModBlocks.LIGHT_TREE_LOG.get()))
+                .unlockedBy("has_light_tree_log", has(ModBlocks.LIGHT_TREE_LOG.get()))
                 .save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_SLAB.get(), 6)
-                .define('P', ModBlocks.LIGHT_TREE_PLANKS)
-                .pattern("PPP")
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_SLAB.get(), ModBlocks.LIGHT_TREE_PLANKS.get());
+        stairBuilder(ModBlocks.LIGHT_TREE_STAIRS.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .group("light_tree")
                 .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
-
 
         //Smeltables
         // Darkness

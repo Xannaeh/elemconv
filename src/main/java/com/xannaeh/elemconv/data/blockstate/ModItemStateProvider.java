@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.data.texture;
+package com.xannaeh.elemconv.data.blockstate;
 
 import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.data.PackOutput;

@@ -79,7 +79,13 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_SLAB = registerBlock("darkness_tree_slab", () ->
-            new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SLAB)
+            new SlabBlock(BlockBehaviour.Properties.of()
+                    .lightLevel((state) -> 1)
+                    .requiresCorrectToolForDrops())
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_STAIRS = registerBlock("darkness_tree_stairs", () ->
+            new StairBlock(ModBlocks.DARKNESS_TREE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
                     .lightLevel((state) -> 1)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
@@ -155,9 +161,15 @@ public class ModBlocks {
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_SLAB = registerBlock("light_tree_slab", () ->
-            new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SLAB)
+            new SlabBlock(BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
                     .lightLevel((state) -> 10))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_STAIRS = registerBlock("light_tree_stairs", () ->
+            new StairBlock(ModBlocks.LIGHT_TREE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .lightLevel((state) -> 10)
+                            .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_FLOWER = registerBlock("light_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
