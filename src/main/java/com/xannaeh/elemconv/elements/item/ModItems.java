@@ -49,7 +49,7 @@ public class ModItems {
     );
     public static final DeferredItem<Item> DARKNESS_COAL = ITEMS.registerItem("darkness_coal", properties -> new FuelItem(properties, 3200),
             new Item.Properties()
-                    .stacksTo(128)
+                    .stacksTo(99)
 
     );
 
@@ -90,7 +90,7 @@ public class ModItems {
     );
     public static final DeferredItem<Item> LIGHT_COAL = ITEMS.registerItem("light_coal", properties -> new FuelItem(properties, 3200),
             new Item.Properties()
-                    .stacksTo(128)
+                    .stacksTo(99)
 
     );
 

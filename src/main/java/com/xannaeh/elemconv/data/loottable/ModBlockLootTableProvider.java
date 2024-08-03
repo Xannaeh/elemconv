@@ -3,20 +3,27 @@ package com.xannaeh.elemconv.data.loottable;
 import com.xannaeh.elemconv.elements.block.ModBlocks;
 import com.xannaeh.elemconv.elements.item.ModItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Optional;
+
 import java.util.Set;
-import java.util.stream.Collectors;
 
-import static com.xannaeh.elemconv.main.ElemConv.MODID;
 
-public class ModBlockLootTables extends BlockLootSubProvider {
-    protected ModBlockLootTables(HolderLookup.Provider pRegistries) {
+public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    public ModBlockLootTableProvider(HolderLookup.Provider pRegistries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
     }
 
@@ -31,7 +38,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.LIGHT_ORE.get(), createOreDrop(ModBlocks.LIGHT_ORE.get(), ModItems.LIGHT_RAW.get()));
         add(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), createOreDrop(ModBlocks.LIGHT_ORE_DEEPSLATE.get(), ModItems.LIGHT_RAW.get()));
         add(ModBlocks.LIGHT_ORE_NETHERRACK.get(), createOreDrop(ModBlocks.LIGHT_ORE_NETHERRACK.get(), ModItems.LIGHT_RAW.get()));
-
+        //Arcane
+//        add(ModBlocks.ARCANE_ORE.get(), createMultipleOreDrops(ModBlocks.ARCANE_ORE.get(), ModItems.ARCANE_GEM.get(),1,5)); //TODO: add when needed
 
         // Blocks
         // Darkness
@@ -47,12 +55,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_FLOWER.get());
     }
 
+
+    protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock,
+                LootItem.lootTableItem(item)
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                        .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
+    }
+
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return BuiltInRegistries.BLOCK.stream()
-                .filter(block -> Optional.of(BuiltInRegistries.BLOCK.getKey(block))
-                        .filter(key -> key.getNamespace().equals(MODID))
-                        .isPresent())
-                .collect(Collectors.toSet());
+        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
+
 }

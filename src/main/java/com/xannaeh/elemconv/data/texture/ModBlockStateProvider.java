@@ -6,9 +6,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import static com.xannaeh.elemconv.main.ElemConv.MODID;
 
@@ -21,33 +21,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // Ores
         // Darkness
-        modNormalBlock(ModBlocks.DARKNESS_ORE.get());
-        modNormalBlock(ModBlocks.DARKNESS_ORE_DEEPSLATE.get());
-        modNormalBlock(ModBlocks.DARKNESS_ORE_ENDSTONE.get());
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE);
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE_DEEPSLATE);
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_ORE_ENDSTONE);
         // Light
-        modNormalBlock(ModBlocks.LIGHT_ORE.get());
-        modNormalBlock(ModBlocks.LIGHT_ORE_DEEPSLATE.get());
-        modNormalBlock(ModBlocks.LIGHT_ORE_NETHERRACK.get());
+        modSimpleBlockWithItem(ModBlocks.LIGHT_ORE);
+        modSimpleBlockWithItem(ModBlocks.LIGHT_ORE_DEEPSLATE);
+        modSimpleBlockWithItem(ModBlocks.LIGHT_ORE_NETHERRACK);
 
         // Blocks
         // Darkness
-        modNormalBlock(ModBlocks.DARKNESS_TREE_PLANKS.get());
+        modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
-        modNormalBlock(ModBlocks.LIGHT_TREE_PLANKS.get());
+        modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
         modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
         modPlanksSlabBlock(ModBlocks.LIGHT_TREE_SLAB.get());
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
     }
 
-    private void modNormalBlock(Block block) {
-        ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
-        String path = blockKey.getPath();
-        simpleBlock(block, models().cubeAll(path, modLoc("block/" + path)));
-        simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
+    private void modSimpleBlockWithItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
     private void modSideBottomTopBlock(Block block) {

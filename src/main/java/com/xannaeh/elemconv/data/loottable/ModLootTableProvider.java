@@ -18,9 +18,9 @@ import java.util.stream.Collectors;
 
 import static com.xannaeh.elemconv.main.ElemConv.MODID;
 
-public class ModLootTables extends LootTableProvider {
-    public ModLootTables(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
-        super(pOutput, Set.of(), List.of(new SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK)), pRegistries);
+public class ModLootTableProvider extends LootTableProvider {
+    public ModLootTableProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries) {
+        super(pOutput, Set.of(), List.of(new SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), pRegistries);
     }
 
     @Override

@@ -34,32 +34,38 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         // TOOLS
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                // Darkness
                 .add(ModBlocks.DARKNESS_ORE.get())
                 .add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get())
                 .add(ModBlocks.DARKNESS_ORE_ENDSTONE.get())
+                // Light
                 .add(ModBlocks.LIGHT_ORE.get())
                 .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
                 .add(ModBlocks.LIGHT_ORE_NETHERRACK.get());
 
 
         tag(BlockTags.MINEABLE_WITH_AXE)
+                // Darkness
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                // Light
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
                 .add(ModBlocks.LIGHT_TREE_SLAB.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
+                // Darkness
                 .add(ModBlocks.DARKNESS_ORE.get())
                 .add(ModBlocks.DARKNESS_ORE_DEEPSLATE.get())
                 .add(ModBlocks.DARKNESS_ORE_ENDSTONE.get())
-                .add(ModBlocks.LIGHT_ORE.get())
-                .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
-                .add(ModBlocks.LIGHT_ORE_NETHERRACK.get())
                 .add(ModBlocks.DARKNESS_TREE_LOG.get())
                 .add(ModBlocks.DARKNESS_TREE_PLANKS.get())
                 .add(ModBlocks.DARKNESS_TREE_SLAB.get())
+                // Light
+                .add(ModBlocks.LIGHT_ORE.get())
+                .add(ModBlocks.LIGHT_ORE_DEEPSLATE.get())
+                .add(ModBlocks.LIGHT_ORE_NETHERRACK.get())
                 .add(ModBlocks.LIGHT_TREE_LOG.get())
                 .add(ModBlocks.LIGHT_TREE_PLANKS.get())
                 .add(ModBlocks.LIGHT_TREE_SLAB.get());

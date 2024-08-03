@@ -18,40 +18,29 @@ public class ModItemStateProvider extends ItemModelProvider {
     protected void registerModels() {
         // Items
         // Darkness
-        item(ModItems.DARKNESS_RAW.get());
-        item(ModItems.DARKNESS_INGOT.get());
-        item(ModItems.DARKNESS_ESSENCE.get());
-        item(ModItems.DARKNESS_FRUIT.get());
-        item(ModItems.DARKNESS_FRUIT_DRIED.get());
-        item(ModItems.DARKNESS_IN_A_BOTTLE.get());
-        item(ModItems.DARKNESS_COAL.get());
+        basicItem(ModItems.DARKNESS_RAW.get());
+        basicItem(ModItems.DARKNESS_INGOT.get());
+        basicItem(ModItems.DARKNESS_ESSENCE.get());
+        basicItem(ModItems.DARKNESS_FRUIT.get());
+        basicItem(ModItems.DARKNESS_FRUIT_DRIED.get());
+        basicItem(ModItems.DARKNESS_IN_A_BOTTLE.get());
+        basicItem(ModItems.DARKNESS_COAL.get());
 
         // Light
-        item(ModItems.LIGHT_RAW.get());
-        item(ModItems.LIGHT_INGOT.get());
-        item(ModItems.LIGHT_ESSENCE.get());
-        item(ModItems.LIGHT_FRUIT.get());
-        item(ModItems.LIGHT_FRUIT_DRIED.get());
-        item(ModItems.LIGHT_IN_A_BOTTLE.get());
-        item(ModItems.LIGHT_COAL.get());
+        basicItem(ModItems.LIGHT_RAW.get());
+        basicItem(ModItems.LIGHT_INGOT.get());
+        basicItem(ModItems.LIGHT_ESSENCE.get());
+        basicItem(ModItems.LIGHT_FRUIT.get());
+        basicItem(ModItems.LIGHT_FRUIT_DRIED.get());
+        basicItem(ModItems.LIGHT_IN_A_BOTTLE.get());
+        basicItem(ModItems.LIGHT_COAL.get());
 
         // Tools + Armors
         // Darkness
-        item(ModItems.DARKNESS_AXE.get());
+        basicItem(ModItems.DARKNESS_AXE.get());
 
         // Light
 
     }
 
-    private void item(Item item) {
-        String name = getItemName(item);
-        getBuilder(name)
-                .parent(getExistingFile(mcLoc("item/generated")))
-                .texture("layer0", "item/" + name);
-    }
-
-
-    private String getItemName(Item item) {
-        return BuiltInRegistries.ITEM.getKey(item).toString().replace(MODID + ":", "");
-    }
 }
