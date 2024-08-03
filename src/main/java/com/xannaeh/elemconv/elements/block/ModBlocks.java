@@ -12,6 +12,7 @@ import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -30,6 +31,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_ORE_DEEPSLATE = registerBlock("darkness_ore_deepslate", () ->
@@ -38,6 +40,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 1)
+                    .strength(6)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_ORE_ENDSTONE = registerBlock("darkness_ore_endstone", () ->
@@ -46,56 +49,80 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_RAW_BLOCK = registerBlock("darkness_raw_block", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_INGOT_BLOCK = registerBlock("darkness_ingot_block", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_LOG = registerBlock("darkness_tree_log", () ->
             new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_WOOD = registerBlock("darkness_tree_wood", () ->
             new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_LOG_STRIPPED = registerBlock("darkness_tree_log_stripped", () ->
             new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_LOG)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_PLANKS = registerBlock("darkness_tree_planks", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_SLAB = registerBlock("darkness_tree_slab", () ->
             new SlabBlock(BlockBehaviour.Properties.of()
                     .lightLevel((state) -> 1)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_PRESSURE_PLATE = registerBlock("darkness_tree_pressure_plate", () ->
+            new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> DARKNESS_TREE_BUTTON = registerBlock("darkness_tree_button", () ->
+            new ButtonBlock(BlockSetType.ACACIA, 20, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .strength(4)
+                    .noCollission()
+                    .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_STAIRS = registerBlock("darkness_tree_stairs", () ->
             new StairBlock(ModBlocks.DARKNESS_TREE_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of()
-                    .lightLevel((state) -> 1)
-                    .requiresCorrectToolForDrops())
+                            .lightLevel((state) -> 1)
+                            .strength(4)
+                            .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_FLOWER = registerBlock("darkness_flower", () ->
             new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY)
-                    .lightLevel((state) -> 1))
+                    .lightLevel((state) -> 1)
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_TREE_SAPLING = registerBlock("darkness_tree_sapling", () ->
-            new SaplingBlock(TreeGrower.ACACIA,BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
-                    .lightLevel((state) -> 1))
+            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
+                    .lightLevel((state) -> 1)
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> DARKNESS_INFUSER_BASIC = registerBlock("darkness_infuser_basic", () ->
             new DarknessInfuserBasic(BlockBehaviour.Properties.of()
@@ -103,6 +130,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.AMETHYST)
                     .lightLevel((state) -> 5)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
 
@@ -113,6 +141,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 10)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_ORE_DEEPSLATE = registerBlock("light_ore_deepslate", () ->
@@ -121,6 +150,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 10)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_ORE_NETHERRACK = registerBlock("light_ore_netherrack", () ->
@@ -129,46 +159,68 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.METAL)
                     .lightLevel((state) -> 10)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_RAW_BLOCK = registerBlock("light_raw_block", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)
                     .lightLevel((state) -> 1)
-                    .requiresCorrectToolForDrops())
+                    .requiresCorrectToolForDrops()
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_INGOT_BLOCK = registerBlock("light_ingot_block", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)
                     .lightLevel((state) -> 1)
-                    .requiresCorrectToolForDrops())
+                    .requiresCorrectToolForDrops()
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_LOG = registerBlock("light_tree_log", () ->
             new LightTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG)
                     .requiresCorrectToolForDrops()
-                    .lightLevel((state) -> 10))
+                    .lightLevel((state) -> 10)
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_WOOD = registerBlock("light_tree_wood", () ->
             new DarknessTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD)
-                    .requiresCorrectToolForDrops())
+                    .requiresCorrectToolForDrops()
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_LOG_STRIPPED = registerBlock("light_tree_log_stripped", () ->
             new LightTreeLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_LOG)
                     .requiresCorrectToolForDrops()
-                    .lightLevel((state) -> 10))
+                    .lightLevel((state) -> 10)
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_PLANKS = registerBlock("light_tree_planks", () ->
             new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)
                     .requiresCorrectToolForDrops()
-                    .lightLevel((state) -> 10))
+                    .lightLevel((state) -> 10)
+                    .strength(4))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_SLAB = registerBlock("light_tree_slab", () ->
             new SlabBlock(BlockBehaviour.Properties.of()
                     .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_PRESSURE_PLATE = registerBlock("light_tree_pressure_plate", () ->
+            new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> 10)
+                    .strength(4))
+    ); //TODO: modify latter
+    public static final DeferredBlock<Block> LIGHT_TREE_BUTTON = registerBlock("light_tree_button", () ->
+            new ButtonBlock(BlockSetType.ACACIA, 10, BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .strength(4)
+                    .noCollission()
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_STAIRS = registerBlock("light_tree_stairs", () ->
             new StairBlock(ModBlocks.LIGHT_TREE_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of()
                             .lightLevel((state) -> 10)
+                            .strength(4)
                             .requiresCorrectToolForDrops())
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_FLOWER = registerBlock("light_flower", () ->
@@ -176,7 +228,7 @@ public class ModBlocks {
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_TREE_SAPLING = registerBlock("light_tree_sapling", () ->
-            new SaplingBlock(TreeGrower.ACACIA,BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
+            new SaplingBlock(TreeGrower.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SAPLING)
                     .lightLevel((state) -> 10))
     ); //TODO: modify latter
     public static final DeferredBlock<Block> LIGHT_INFUSER_BASIC = registerBlock("light_infuser_basic", () ->
@@ -185,6 +237,7 @@ public class ModBlocks {
                     .explosionResistance(10.0f)
                     .sound(SoundType.AMETHYST)
                     .lightLevel((state) -> 5)
+                    .strength(4)
                     .requiresCorrectToolForDrops())
     );//TODO: modify latter
 

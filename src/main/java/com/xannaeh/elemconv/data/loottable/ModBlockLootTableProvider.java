@@ -49,8 +49,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARKNESS_TREE_WOOD.get());
         dropSelf(ModBlocks.DARKNESS_TREE_LOG_STRIPPED.get());
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
-        add(ModBlocks.DARKNESS_TREE_SLAB.get(), block -> createSlabItemTable(ModBlocks.DARKNESS_TREE_SLAB.get()));
+        modDropSlab(ModBlocks.DARKNESS_TREE_SLAB.get());
         dropSelf(ModBlocks.DARKNESS_TREE_STAIRS.get());
+        dropSelf(ModBlocks.DARKNESS_TREE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.DARKNESS_TREE_BUTTON.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SAPLING.get());
         dropSelf(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -61,15 +63,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIGHT_TREE_WOOD.get());
         dropSelf(ModBlocks.LIGHT_TREE_LOG_STRIPPED.get());
         dropSelf(ModBlocks.LIGHT_TREE_PLANKS.get());
-        add(ModBlocks.LIGHT_TREE_SLAB.get(), block -> createSlabItemTable(ModBlocks.LIGHT_TREE_SLAB.get()));
+        modDropSlab(ModBlocks.LIGHT_TREE_SLAB.get());
         dropSelf(ModBlocks.LIGHT_TREE_STAIRS.get());
+        dropSelf(ModBlocks.LIGHT_TREE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.LIGHT_TREE_BUTTON.get());
         dropSelf(ModBlocks.LIGHT_FLOWER.get());
         dropSelf(ModBlocks.LIGHT_TREE_SAPLING.get());
         dropSelf(ModBlocks.LIGHT_INFUSER_BASIC.get());
     }
 
+    protected void modDropSlab(Block pBlock) {
+        add(pBlock, block -> createSlabItemTable(pBlock));
+    }
 
-    protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
+    protected LootTable.Builder modCreateMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return this.createSilkTouchDispatchTable(pBlock, this.applyExplosionDecay(pBlock,
                 LootItem.lootTableItem(item)

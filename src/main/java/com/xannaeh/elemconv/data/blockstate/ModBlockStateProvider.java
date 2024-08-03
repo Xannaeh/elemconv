@@ -5,9 +5,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -44,6 +43,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modSimpleBlockWithItem(ModBlocks.DARKNESS_TREE_PLANKS);
         modSlabBlock(ModBlocks.DARKNESS_TREE_SLAB, ModBlocks.DARKNESS_TREE_PLANKS);
         modStairsBlock(ModBlocks.DARKNESS_TREE_STAIRS, ModBlocks.DARKNESS_TREE_PLANKS);
+        modPressurePlate(ModBlocks.DARKNESS_TREE_PRESSURE_PLATE, ModBlocks.DARKNESS_TREE_PLANKS);
+        modButton(ModBlocks.DARKNESS_TREE_BUTTON, ModBlocks.DARKNESS_TREE_PLANKS);
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
         modCrossBlock(ModBlocks.DARKNESS_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
@@ -55,6 +56,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modSimpleBlockWithItem(ModBlocks.LIGHT_TREE_PLANKS);
         modSlabBlock(ModBlocks.LIGHT_TREE_SLAB, ModBlocks.LIGHT_TREE_PLANKS);
         modStairsBlock(ModBlocks.LIGHT_TREE_STAIRS, ModBlocks.LIGHT_TREE_PLANKS);
+        modPressurePlate(ModBlocks.LIGHT_TREE_PRESSURE_PLATE, ModBlocks.LIGHT_TREE_PLANKS);
+        modButton(ModBlocks.LIGHT_TREE_BUTTON, ModBlocks.LIGHT_TREE_PLANKS);
         modCrossBlock(ModBlocks.LIGHT_FLOWER.get());
         modCrossBlock(ModBlocks.LIGHT_TREE_SAPLING.get());
         modSideBottomTopBlock(ModBlocks.LIGHT_INFUSER_BASIC.get());
@@ -73,6 +76,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void modStairsBlock(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
         stairsBlock(((StairBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
         modBlockItem(deferredBlock);
+    }
+
+    private void modPressurePlate(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        pressurePlateBlock(((PressurePlateBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        modBlockItem(deferredBlock);
+    }
+
+    private void modButton(@NotNull DeferredBlock<Block> deferredBlock, @NotNull DeferredBlock<Block> textureBlock) {
+        buttonBlock(((ButtonBlock) deferredBlock.get()), blockTexture(textureBlock.get()));
+        // You have to manually create the item!
     }
 
     private void modBlockItem(@NotNull DeferredBlock<Block> deferredBlock) {

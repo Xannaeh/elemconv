@@ -111,6 +111,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("darkness_tree")
                 .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.DARKNESS_TREE_PRESSURE_PLATE.get(), ModBlocks.DARKNESS_TREE_PLANKS);
+        buttonBuilder(ModBlocks.DARKNESS_TREE_BUTTON.get(), Ingredient.of(ModBlocks.DARKNESS_TREE_PLANKS))
+                .group("darkness_tree")
+                .unlockedBy("has_darkness_tree_planks", has(ModBlocks.DARKNESS_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
         // Light
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_RAW_BLOCK.get(), 1)
                 .define('R', ModItems.LIGHT_RAW)
@@ -142,6 +147,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput);
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_TREE_SLAB.get(), ModBlocks.LIGHT_TREE_PLANKS.get());
         stairBuilder(ModBlocks.LIGHT_TREE_STAIRS.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .group("light_tree")
+                .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
+                .save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.LIGHT_TREE_PRESSURE_PLATE.get(), ModBlocks.LIGHT_TREE_PLANKS);
+        buttonBuilder(ModBlocks.LIGHT_TREE_BUTTON.get(), Ingredient.of(ModBlocks.LIGHT_TREE_PLANKS))
                 .group("light_tree")
                 .unlockedBy("has_light_tree_planks", has(ModBlocks.LIGHT_TREE_PLANKS.get()))
                 .save(pRecipeOutput);
