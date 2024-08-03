@@ -39,6 +39,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARKNESS_TREE_PLANKS.get());
         dropSelf(ModBlocks.DARKNESS_TREE_SLAB.get());
         dropSelf(ModBlocks.DARKNESS_FLOWER.get());
+        dropSelf(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
         dropSelf(ModBlocks.LIGHT_TREE_LOG.get());
         dropSelf(ModBlocks.LIGHT_TREE_PLANKS.get());

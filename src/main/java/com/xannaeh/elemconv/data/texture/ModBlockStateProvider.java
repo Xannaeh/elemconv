@@ -35,6 +35,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modLogBlock(ModBlocks.DARKNESS_TREE_LOG.get());
         modPlanksSlabBlock(ModBlocks.DARKNESS_TREE_SLAB.get());
         modCrossBlock(ModBlocks.DARKNESS_FLOWER.get());
+        modSideBottomTopBlock(ModBlocks.DARKNESS_INFUSER_BASIC.get());
         // Light
         modNormalBlock(ModBlocks.LIGHT_TREE_PLANKS.get());
         modLogBlock(ModBlocks.LIGHT_TREE_LOG.get());
@@ -46,6 +47,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
         String path = blockKey.getPath();
         simpleBlock(block, models().cubeAll(path, modLoc("block/" + path)));
+        simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
+    }
+
+    private void modSideBottomTopBlock(Block block) {
+        ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(block);
+        String path = blockKey.getPath() + "_side";
+        String pathTop = blockKey.getPath() + "_top";
+        String pathBottom = blockKey.getPath() + "_bottom";
+        simpleBlock(block, models().cubeBottomTop(path, modLoc("block/" + path), modLoc("block/" + pathBottom), modLoc("block/" + pathTop)));
         simpleBlockItem(block, models().getExistingFile(modLoc("block/" + path)));
     }
 

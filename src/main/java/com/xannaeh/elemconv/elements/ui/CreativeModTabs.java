@@ -33,6 +33,7 @@ public class CreativeModTabs {
                                 output.accept(ModBlocks.DARKNESS_TREE_PLANKS.get());
                                 output.accept(ModBlocks.DARKNESS_TREE_SLAB.get());
                                 output.accept(ModBlocks.DARKNESS_FLOWER.get());
+                                output.accept(ModBlocks.DARKNESS_INFUSER_BASIC.get());
                                 // Items
                                 output.accept(ModItems.DARKNESS_RAW.get());
                                 output.accept(ModItems.DARKNESS_INGOT.get());

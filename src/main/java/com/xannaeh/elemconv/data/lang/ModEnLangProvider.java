@@ -38,6 +38,7 @@ public class ModEnLangProvider extends LanguageProvider {
         addBlock(ModBlocks.DARKNESS_TREE_PLANKS, "Darkness tree planks");
         addBlock(ModBlocks.DARKNESS_TREE_SLAB, "Darkness tree slab");
         addBlock(ModBlocks.DARKNESS_FLOWER, "Darkness flower");
+        addBlock(ModBlocks.DARKNESS_INFUSER_BASIC, "Darkness basic infuser");
         // Light
         addBlock(ModBlocks.LIGHT_ORE, "Light ore");
         addBlock(ModBlocks.LIGHT_ORE_DEEPSLATE, "Light ore deepslate");

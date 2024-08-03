@@ -31,4 +31,5 @@ public class DarknessAxeItem extends Item {
 
         return InteractionResult.CONSUME;
     }
+
 }
