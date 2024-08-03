@@ -1,6 +1,7 @@
 package com.xannaeh.elemconv.elements.item;
 
-import com.xannaeh.elemconv.elements.item.custom.DarknessAxeItem;
+import com.xannaeh.elemconv.elements.item.custom.tools.DarknessAxeItem;
+import com.xannaeh.elemconv.elements.item.custom.foods.DarknessInABottle;
 import com.xannaeh.elemconv.main.ElemConv;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -39,6 +40,12 @@ public class ModItems {
                     .food(ModFoods.DARKNESS_FRUIT_DRIED)
 
     );
+    public static final DeferredItem<Item> DARKNESS_IN_A_BOTTLE = ITEMS.registerItem("darkness_in_a_bottle", DarknessInABottle::new,
+            new Item.Properties()
+                    .stacksTo(16)
+                    .food(ModFoods.DARKNESS_IN_A_BOTTLE)
+
+    );
 
 
     // Light
@@ -67,6 +74,12 @@ public class ModItems {
             new Item.Properties()
                     .stacksTo(64)
                     .food(ModFoods.LIGHT_FRUIT_DRIED)
+
+    );
+    public static final DeferredItem<Item> LIGHT_IN_A_BOTTLE = ITEMS.registerItem("light_in_a_bottle", DarknessInABottle::new,
+            new Item.Properties()
+                    .stacksTo(16)
+                    .food(ModFoods.LIGHT_IN_A_BOTTLE)
 
     );
 

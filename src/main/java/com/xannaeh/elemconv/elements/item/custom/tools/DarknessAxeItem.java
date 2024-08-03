@@ -1,4 +1,4 @@
-package com.xannaeh.elemconv.elements.item.custom;
+package com.xannaeh.elemconv.elements.item.custom.tools;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
